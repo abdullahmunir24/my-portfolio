@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import './header.css';
 import Typed from 'typed.js';
 import Switch from './Switch.js'
-import Resume from '/Users/abdullahmunir/Desktop/my-portfolio/src/Abdullah Munir.pdf'; 
+import Resume from '../Abdullah Munir.pdf';
 
 export default function Header() {
   const type = useRef(null);
