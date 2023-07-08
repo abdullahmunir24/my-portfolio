@@ -64,7 +64,7 @@ export default function About() {
             >
               <img
                 className="custom-image"
-                src={require("/Users/abdullahmunir/Desktop/my-portfolio/src/images/me.jpeg")}
+                src={require("../images/me.jpeg")}
                 alt="Me"
                 ref={imageRef}
               />
