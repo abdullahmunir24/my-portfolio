@@ -1,0 +1,180 @@
+.custom-section {
+  color: #00FF00;
+  padding-top: 8rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 30rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.custom-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.25rem;
+}
+
+.content-container {
+  width: 100%;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  text-align: center;
+}
+
+.custom-title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.custom-description {
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 24px;
+}
+
+.custom-each-description {
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: red;
+  background-color: white;
+  border: 0;
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+  border-radius: 0.25rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.custom-button:last-child {
+  margin-right: 0;
+}
+
+.custom-button:hover {
+  background-color: yellow;
+}
+
+.custom-button.active {
+  background-color: yellow;
+}
+
+.flex-row {
+  align-items: flex-start;
+}
+
+.@keyframes imageAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes infoAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.image-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+
+}
+
+.image-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 10000ms, transform 1000ms;
+
+}
+
+.info-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.info-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+
+
+@media (max-width: 768px) {
+  .flex-row {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  .custom-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.25rem;
+  }
+
+  .content-container {
+    flex-grow: 1;
+    width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    text-align: center;
+  }
+}

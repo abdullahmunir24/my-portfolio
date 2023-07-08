@@ -1,0 +1,54 @@
+.icons {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+  }
+  
+  .icon-container {
+	display: block;
+	position: relative;
+	margin-top: 100px;
+  }
+  
+  .icon {
+	font-size: 2em;
+	padding: 0 10px;
+	color: hsl(50, 85%, 55%);
+	transition: color 1.2s, transform 1.2s;
+  }
+  
+  .icon2 {
+	display: none;
+  }
+  
+  .dark .icon1 {
+	display: none;
+  }
+  
+  .dark .icon2 {
+	display: inline-flex;
+	transform: rotate(180deg);
+	color: #ccc;
+  }
+  
+  @keyframes flyIcon {
+	0% {
+	  transform: translateY(-100%) rotate(0deg);
+	}
+	100% {
+	  transform: translateY(0) rotate(360deg);
+	}
+  }
+  
+  .icon-change-animation {
+	animation: flyIcon 0.5s ease-in-out;
+  }
+  
+  .mode-text {
+	margin-top: 18px;
+	color: #fff;
+	font-size: 16px;
+  }
+
+
+  
