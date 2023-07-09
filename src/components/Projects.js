@@ -45,7 +45,7 @@ export default function Projects() {
               <img src="images/work-3.png" alt="" />
               <div className="layer">
                 <h3>IOS App</h3>
-                <p>APp to sove the issue of not finding fesible maids in PAkistan. MAde using Swift and Firebase</p>
+                <p>IOS APP to sove the issue of not finding fesible maids in Pakistan. Made using Swift and Firebase</p>
                 <a href="#">
                   <i className="fas fa-external-link-alt"></i>
                 </a>
@@ -53,11 +53,11 @@ export default function Projects() {
               </div>
             </div>
             <div className="work">
-              <img src="images/work-3.png" alt="" />
+            <img src={require("../images/Data-Analytics.png")}/>
               <div className="layer">
                 <h3>Data Analysis and Visualiation</h3>
-                <p>Analysed Data about Health costs in the USA using pandas, seaborn, matplotlib and tableau</p>
-                <a href="#">
+                <p>Analysed Data about Health costs in the USA using pandas, seaborn, matplotlib and tableau. It was a group project for my course in university(DATA301)</p>
+                <a href="https://github.com/ubco-W2022T2-data301/project-group-group40" target='blank'>
                   <i className="fas fa-external-link-alt"></i>
                 </a>
                 
