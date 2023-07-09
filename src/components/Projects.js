@@ -11,7 +11,7 @@ export default function Projects() {
           <h1 className="sub-title">Personal Projects</h1>
           <div className="work-list">
             <div className="work">
-              <img src="images/work-1.png" alt="" />
+              <img src="../images/thumbnail.png" alt="" />
               <div className="layer">
                 <h3>Perosnal Portfolio</h3>
                 <p>Created it using React.js</p>
