@@ -5,7 +5,7 @@
   }
   
   .icon-container {
-	display: block;
+	display: inline-flex;
 	position: relative;
 	margin-top: 100px;
   }
@@ -45,10 +45,22 @@
   }
   
   .mode-text {
-	margin-top: 18px;
+	margin-top: 5px;
 	color: #fff;
-	font-size: 16px;
+	font-size: 19px;
   }
 
+
+  @media (max-width: 768px) {
+
+	.icon-container {
+		display: inline-flex;
+		position: relative;
+		margin-top: -20px;
+		margin-left: -20px;
+	  }
+
+
+  }
 
   

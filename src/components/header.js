@@ -11,7 +11,7 @@ export default function Header() {
 
   useEffect(() => {
     const options = {
-      strings: ['Web Developer', 'iOS Developer', 'Software Engineer', 'Data Scientist'],
+      strings: ['Web Developer!', 'App Developer!', 'Software Engineer!', 'Data Scientist!'],
       typeSpeed: 50,
       loop: true,
       loopCount: Infinity,
@@ -37,7 +37,7 @@ export default function Header() {
     <div id="header">
       <div className="container">
         <nav className={navbarOpen ? 'open' : ''}>
-          <button className="custom-button" onClick={handleOpenResume}> Open Resume</button>
+          <button className="header-button" onClick={handleOpenResume}> Open Resume</button>
           <div className={`navbar-overlay ${navbarOpen ? 'open' : ''}`} onClick={toggleNavbar}></div>
           <div className="navbar-toggler" onClick={toggleNavbar}>
             <div className="icon-bar"></div>

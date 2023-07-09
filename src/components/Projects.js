@@ -25,7 +25,7 @@ export default function Projects() {
               <div className="layer">
                 <h3>AI chatbot</h3>
                 <p>Build it using pyhton and the AI API key</p>
-                <a href="#">
+                <a href="https://github.com/abdullahmunir24/AI-Chatbot" target='blank'>
                   <i className="fas fa-external-link-alt"></i>
                 </a>
               </div>

@@ -80,7 +80,10 @@ export default function Footer() {
               </div>
             </div>
             {showSuccessMessage ? (
-              <p className="success-message">Form submitted successfully!</p>
+              <div>
+              <p className="success-message">Thank you for your submission!</p>
+              <p className="success-message">A confirmation email has been sent to your email address.</p>
+</div>
             ) : (
               <button type="submit" className="custom-button">
                 Send Message

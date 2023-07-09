@@ -10,7 +10,6 @@ body {
   color: #fff;
 }
 
-/* Header Styles */
 #header {
   width: 100%;
   height: 100vh;
@@ -53,21 +52,7 @@ nav ul li a:hover::after {
   transform: scaleX(1);
 }
 
-.custom-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: red;
-  background-color: white;
-  border: 0;
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.25rem;
-  font-size: 1.125rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: auto; 
-}
+
 .header-text {
   margin-top: 20%;
   font-size: 36px;
@@ -94,14 +79,15 @@ nav ul {
   display: flex;
   align-items: center;
   list-style: none;
-  margin-top: ;
+  margin-top: -130px;
+  margin-right: -90px;
 }
 
 nav ul li {
   margin-left: 1rem;
 }
 
-.custom-button {
+.header-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,9 +99,15 @@ nav ul li {
   border-radius: 0.25rem;
   font-size: 1.125rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 1rem; /* Adjust the margin-left value as needed */
+  transition: background-color 0.3s ease; 
+  margin-left: -50px;
+  margin-top: -130px;
 }
+
+.header-button:hover {
+  background-color: yellow;
+}
+
 
 
 
@@ -127,7 +119,7 @@ nav ul li {
     align-items: flex-start;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top: 0;
+    top: 20vh; 
     left: 0;
     width: 100%;
     padding: 20px;
@@ -135,8 +127,6 @@ nav ul li {
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
   }
-
-
 
   nav ul.open {
     opacity: 1;
@@ -164,31 +154,35 @@ nav ul li {
     transition: transform 0.3s;
   }
 
-  .icon-bar:last-child {
-    margin-bottom: 0;
-  }
-
-  .navbar-toggler.open .icon-bar:first-child {
-    transform: rotate(-45deg) translate(-4px, 5px);
-  }
-
-  .navbar-toggler.open .icon-bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .navbar-toggler.open .icon-bar:last-child {
-    transform: rotate(45deg) translate(-4px, -5px);
-  }
-
-  
-
   nav.open .navbar-overlay {
     display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+
+  }
+
+  .header-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: red;
+    background-color: white;
+    border: 0;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .header-button:hover {
+    background-color: yellow;
   }
 }
