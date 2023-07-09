@@ -31,7 +31,7 @@ export default function Projects() {
               </div>
             </div>
             <div className="work">
-              <img src="images/work-3.png" alt="" />
+            <img src={require("../images/recipe.jpg")}/>
               <div className="layer">
                 <h3>Recipe Website</h3>
                 <p>Website tracks your meals and and gives ypu recipes as Well. Made using React.js </p>
@@ -42,10 +42,10 @@ export default function Projects() {
               </div>
             </div>
             <div className="work">
-              <img src="images/work-3.png" alt="" />
+            <img src={require("../images/app.jpg")}/>
               <div className="layer">
                 <h3>IOS App</h3>
-                <p>IOS APP to sove the issue of not finding fesible maids in Pakistan. Made using Swift and Firebase</p>
+                <p>IOS APP to sove the issue of not finding fesible blue collar jobs such as maids in Pakistan. Made using Swift and Firebase</p>
                 <a href="#">
                   <i className="fas fa-external-link-alt"></i>
                 </a>
@@ -64,7 +64,7 @@ export default function Projects() {
               </div>
             </div>
             <div className="work">
-              <img src="images/work-3.png" alt="" />
+            <img src={require("../images/game.jpg")}/>
               <div className="layer">
                 <h3>Brick Breaker Game</h3>
                 <p>Made a brick breaker game using Processing</p>
