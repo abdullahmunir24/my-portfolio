@@ -15,7 +15,7 @@ export default function Projects() {
               <div className="layer">
                 <h3>Perosnal Portfolio</h3>
                 <p>Created it using React.js</p>
-                <a href="#">
+                <a href="https://github.com/abdullahmunir24/my-portfolio">
                   <i className="fas fa-external-link-alt"></i>
                 </a>
               </div>
