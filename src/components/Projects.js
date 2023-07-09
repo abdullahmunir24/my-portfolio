@@ -11,11 +11,11 @@ export default function Projects() {
           <h1 className="sub-title">Personal Projects</h1>
           <div className="work-list">
             <div className="work">
-              <img src="../images/thumbnail.png" alt="" />
+            <img src={require("../images/thumbnail.png")}/>
               <div className="layer">
                 <h3>Perosnal Portfolio</h3>
                 <p>Created it using React.js</p>
-                <a href="https://github.com/abdullahmunir24/my-portfolio">
+                <a href="https://github.com/abdullahmunir24/my-portfolio" target='blank'>
                   <i className="fas fa-external-link-alt"></i>
                 </a>
               </div>
