@@ -12,12 +12,12 @@ export default function Footer() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-  
+
     const formData = new FormData(form.current);
-    formData.append("user_name",fullName); 
-    formData.append("user_email",email); 
+    formData.append("user_name", fullName);
+    formData.append("user_email", email);
     const templateParams = Object.fromEntries(formData);
-  
+
     emailjs.send(
       process.env.REACT_APP_SERVICE_ID,
       process.env.REACT_APP_TEMPLATE_ID,
@@ -30,10 +30,10 @@ export default function Footer() {
           setEmail('');
           setMessage('');
           setShowSuccessMessage(true);
-  
+
           setTimeout(() => {
             setShowSuccessMessage(false);
-          }, 2000); 
+          }, 4000);
         } else {
           console.log('Error:', response.text);
         }
@@ -72,8 +72,8 @@ export default function Footer() {
                 <span className="phone-link">+1 250 864 8491</span>
               </div>
               <div>
-              <i className="fas fa-envelope"></i>
-<a href="mailto:abdullahmunir2004@gmail.com" className="email-link">abdullahmunir2004@gmail.com</a>
+                <i className="fas fa-envelope"></i>
+                <a href="mailto:abdullahmunir2004@gmail.com" className="email-link">abdullahmunir2004@gmail.com</a>
 
 
 
@@ -81,9 +81,9 @@ export default function Footer() {
             </div>
             {showSuccessMessage ? (
               <div>
-              <p className="success-message">Thank you for your submission!</p>
-              <p className="success-message">A confirmation email has been sent to your email address.</p>
-</div>
+                <p className="success-message">Thank you for your submission!</p>
+                <p className="success-message">A confirmation email has been sent to your email address.</p>
+              </div>
             ) : (
               <button type="submit" className="custom-button">
                 Send Message
