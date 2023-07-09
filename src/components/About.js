@@ -8,8 +8,8 @@ export default function About() {
   const [displayedInfo, setDisplayedInfo] = useState('');
   const [imageVisible, setImageVisible] = useState(false);
   const { ref, inView } = useInView({
-    triggerOnce: true, // Only trigger once when the element comes into view
-    threshold: 0.2, // Percentage of the element visible in the viewport to trigger the animation
+    triggerOnce: true, 
+    threshold: 0.2, 
   });
   const imageRef = useRef(null);
 

@@ -21,15 +21,15 @@ const Switch = () => {
       icons.style.setProperty("--rotation", rotation - 180);
       dark = !dark;
       if (dark) {
-        icon1.style.display = "block";
-        icon2.style.display = "none";
-        icon2.classList.add("icon-change-animation");
-        setModeText("You are in dark mode"); 
-      } else {
         icon1.style.display = "none";
         icon2.style.display = "block";
-        icon1.classList.add("icon-change-animation");
+        icon2.classList.add("icon-change-animation");
         setModeText("You are in light mode"); 
+      } else {
+        icon1.style.display = "block";
+        icon2.style.display = "none";
+        icon1.classList.add("icon-change-animation");
+        setModeText("You are in dark mode"); 
       }
       localStorage.setItem("animated-icons-darkmode", JSON.stringify(dark));
       toggleTheme();

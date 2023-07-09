@@ -46,10 +46,9 @@ export default function Footer() {
   return (
     <section id="contact">
       <div className="social">
-        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/_abdullahmunir_/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+        <a href="https://github.com/abdullahmunir24" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/abdullah-munir-b06a17250/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
       </div>
       <div className="contact-box">
         <div className="c-heading">
