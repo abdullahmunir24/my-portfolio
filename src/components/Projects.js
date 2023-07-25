@@ -1,7 +1,6 @@
-import React from 'react';
-import './Projects.css';
-import '@fortawesome/fontawesome-free/css/all.css';
-
+import React from "react";
+import "./Projects.css";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 export default function Projects() {
   return (
@@ -11,70 +10,104 @@ export default function Projects() {
           <h1 className="sub-title">Personal Projects</h1>
           <div className="work-list">
             <div className="work">
-            <img src={require("../images/thumbnail.png")}/>
+              <img src={require("../images/thumbnail.png")} />
               <div className="layer">
-                <h3>Perosnal Portfolio</h3>
-                <p>Created it using React.js</p>
-                <a href="https://github.com/abdullahmunir24/my-portfolio" target='blank'>
+                <h3>Personal Portfolio Website (June 2023)</h3>
+                <p>
+                  Crafted a dynamic personal portfolio website using React.js,
+                  HTML, and CSS to highlight my skills, experiences, and
+                  projects. Showcasing a user-friendly design with dark and
+                  light mode for an engaging experience.
+                </p>
+                <a
+                  href="https://github.com/abdullahmunir24/my-portfolio"
+                  target="blank"
+                >
                   <i className="fas fa-external-link-alt"></i>
                 </a>
-              </div>
-            </div>
-            <div className="work">
-            <img src={require("../images/chatbot.jpeg")}/>
-              <div className="layer">
-                <h3>AI chatbot</h3>
-                <p>Build it using pyhton and the AI API key. It opens windows,apps and can even log in to my instagram. Can tell the weather and news using their API keys.</p>
-                <a href="https://github.com/abdullahmunir24/AI-Chatbot" target='blank'>
-                  <i className="fas fa-external-link-alt"></i>
-                </a>
-              </div>
-            </div>
-            <div className="work">
-            <img src={require("../images/recipe.jpg")}/>
-              <div className="layer">
-                <h3>Recipe Website</h3>
-                <p>Website tracks your meals and and gives ypu recipes as Well. Made using React.js </p>
-                <a href="#">
-                  <i className="fas fa-external-link-alt"></i>
-                </a>
-                
-              </div>
-            </div>
-            <div className="work">
-            <img src={require("../images/app.jpg")}/>
-              <div className="layer">
-                <h3>IOS App</h3>
-                <p>IOS APP to sove the issue of not finding fesible blue collar jobs such as maids in Pakistan. Made using Swift and Firebase</p>
-                <a href="#">
-                  <i className="fas fa-external-link-alt"></i>
-                </a>
-                
-              </div>
-            </div>
-            <div className="work">
-            <img src={require("../images/Data-Analytics.png")}/>
-              <div className="layer">
-                <h3>Data Analysis and Visualiation</h3>
-                <p>Analysed Data about Health costs in the USA using pandas, seaborn, matplotlib and tableau. It was a group project for my course in university(DATA301)</p>
-                <a href="https://github.com/ubco-W2022T2-data301/project-group-group40" target='blank'>
-                  <i className="fas fa-external-link-alt"></i>
-                </a>
-                
-              </div>
-            </div>
-            <div className="work">
-            <img src={require("../images/game.jpg")}/>
-              <div className="layer">
-                <h3>Brick Breaker Game</h3>
-                <p>Made a brick breaker game using Processing</p>
-                <a href="#">
-                  <i className="fas fa-external-link-alt"></i>
-                </a>
-                
               </div>
             </div>
 
+            <div className="work">
+              <img src={require("../images/recipe.jpg")} />
+              <div className="layer">
+                <h3>SavorySmart (Jul 2023 - Present)</h3>
+                <p>
+                  Crafting a versatile recipe website with React, Firebase, and
+                  APIs, offering a delightful experience with features like
+                  recipe display, advanced search, ingredient info, nutritional
+                  analysis, customizable meal plans, and grocery lists for
+                  effortless meal preparation. Empowering users with a
+                  comprehensive culinary resource, combining technology and
+                  creativity to enhance their cooking journey.
+                </p>
+                <a href="https://github.com/abdullahmunir24/FoodWebsite">
+                  <i className="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="work">
+              <img src={require("../images/app.jpg")} />
+              <div className="layer">
+                <h3>HandyHelp(July 2023 - Present)</h3>
+                <p>
+                  Developing a cross-platform mobile app with React Native and
+                  Firebase for connecting consumers with maids to target
+                  blue-collar jobs in Pakistan. Streamlining the process of
+                  hiring maids, ensuring a user-friendly experience, and
+                  leveraging technology to bridge the gap between service
+                  providers and consumers.
+                </p>
+                <a href="https://github.com/abdullahmunir24/final-app">
+                  <i className="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="work">
+              <img src={require("../images/chatbot.jpeg")} />
+              <div className="layer">
+                <h3>Personal Chatbot(June 2023)</h3>
+                <p>
+                  Created a dynamic AI chatbot using Python, seamlessly handling
+                  tasks like window and app opening, Instagram login, and
+                  real-time weather and news updates through advanced API
+                  integration, showcasing innovative automation and data-driven
+                  responses.
+                </p>
+                <a
+                  href="https://github.com/abdullahmunir24/AI-Chatbot"
+                  target="blank"
+                >
+                  <i className="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="work">
+              <img src={require("../images/Data-Analytics.png")} />
+              <div className="layer">
+                <h3>
+                  Health Insights USA: Data Analysis and Visualization(Mar 2023
+                  - Apr 2023)
+                </h3>
+                <p>
+                  Collaborated with two other team members in a group project,
+                  utilizing pandas, seaborn, matplotlib, and tableau to analyze
+                  extensive health cost data in the United States such as the
+                  impact of smoking behaviour on medical costs and the
+                  relationship between BMI, region, and gender in the USA on
+                  health costs.
+                </p>
+                <a
+                  href="https://github.com/ubco-W2022T2-data301/project-group-group40"
+                  target="blank"
+                >
+                  <i className="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

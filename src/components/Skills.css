@@ -14,13 +14,13 @@
   margin: 0 auto;
   text-align: center;
   padding: 20px;
-  overflow: hidden; /* Hide the overflow to prevent horizontal scrolling */
+  overflow: hidden; 
   margin-top: 50px;
   margin-bottom: 150px;
 }
 
 .carousel-title {
-  margin-bottom: 20px; /* Add spacing between carousel title and skills */
+  margin-bottom: 20px; 
 }
 
 .carousel-skills {
@@ -58,3 +58,4 @@
 .skill-item.tailwind-css {
   margin-top: 30px;
 }
+

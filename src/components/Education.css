@@ -140,6 +140,14 @@
   .education-timeline .timeline:nth-child(4n+4) .timeline-year {
     background: #FE3559;
   }
+
+  .space {
+    margin-bottom: 15px;
+  }
+
+  
+
+
   
   @media screen and (max-width: 990px) {
     .education-timeline .timeline {
