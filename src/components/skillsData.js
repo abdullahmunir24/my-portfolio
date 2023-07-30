@@ -71,7 +71,7 @@ const skillsData = [
   {
     id: 25,
     name: "MTA 98-381: Passed the exam with a score of 91/100",
-    image: require("../images/MTA Exam Cert.pdf"),
+    image: require("../images/MTA Exam Cert.jpg"),
   },
 ];
 

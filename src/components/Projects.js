@@ -41,7 +41,10 @@ export default function Projects() {
                   comprehensive culinary resource, combining technology and
                   creativity to enhance their cooking journey.
                 </p>
-                <a href="https://github.com/abdullahmunir24/FoodWebsite">
+                <a
+                  href="https://github.com/abdullahmunir24/FoodWebsite"
+                  target="blank"
+                >
                   <i className="fas fa-external-link-alt"></i>
                 </a>
               </div>
@@ -59,7 +62,10 @@ export default function Projects() {
                   leveraging technology to bridge the gap between service
                   providers and consumers.
                 </p>
-                <a href="https://github.com/abdullahmunir24/final-app">
+                <a
+                  href="https://github.com/abdullahmunir24/final-app"
+                  target="blank"
+                >
                   <i className="fas fa-external-link-alt"></i>
                 </a>
               </div>
@@ -68,7 +74,7 @@ export default function Projects() {
             <div className="work">
               <img src={require("../images/chatbot.jpeg")} />
               <div className="layer">
-                <h3>Personal Chatbot(June 2023)</h3>
+                <h3>Personal Chatbot(July 2023)</h3>
                 <p>
                   Created a dynamic AI chatbot using Python, seamlessly handling
                   tasks like window and app opening, Instagram login, and
@@ -77,7 +83,7 @@ export default function Projects() {
                   responses.
                 </p>
                 <a
-                  href="https://github.com/abdullahmunir24/AI-Chatbot"
+                  href="https://github.com/abdullahmunir24/Personal-Chatbot"
                   target="blank"
                 >
                   <i className="fas fa-external-link-alt"></i>
