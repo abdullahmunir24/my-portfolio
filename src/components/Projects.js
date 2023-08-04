@@ -34,12 +34,9 @@ export default function Projects() {
                 <h3>SavorySmart (Jul 2023 - Present)</h3>
                 <p>
                   Crafting a versatile recipe website with React, Firebase, and
-                  APIs, offering a delightful experience with features like
-                  recipe display, advanced search, ingredient info, nutritional
-                  analysis, customizable meal plans, and grocery lists for
-                  effortless meal preparation. Empowering users with a
-                  comprehensive culinary resource, combining technology and
-                  creativity to enhance their cooking journey.
+                  APIs, offering an experience with features like recipe
+                  display, advanced search, ingredient info, nutritional
+                  analysis, and customizable meals.
                 </p>
                 <a
                   href="https://github.com/abdullahmunir24/FoodWebsite"
@@ -55,12 +52,13 @@ export default function Projects() {
               <div className="layer">
                 <h3>HandyHelp(July 2023 - Present)</h3>
                 <p>
-                  Developing a cross-platform mobile app with React Native and
-                  Firebase for connecting consumers with maids to target
-                  blue-collar jobs in Pakistan. Streamlining the process of
-                  hiring maids, ensuring a user-friendly experience, and
-                  leveraging technology to bridge the gap between service
-                  providers and consumers.
+                  Built a mobile app with React Native and Firebase to connect
+                  blue-collar workers for job opportunities within Pakistan. The
+                  business model is to build a market place to match freelance
+                  labor with local demand. The model is similar to TaskRabbit
+                  (US) or Airtasker (AU). It is a personal project, work in
+                  progress as I started in June 2023 driven by macro economic
+                  situation in Pakistan and current market gap.
                 </p>
                 <a
                   href="https://github.com/abdullahmunir24/final-app"
@@ -76,11 +74,10 @@ export default function Projects() {
               <div className="layer">
                 <h3>Personal Chatbot(July 2023)</h3>
                 <p>
-                  Created a dynamic AI chatbot using Python, seamlessly handling
-                  tasks like window and app opening, Instagram login, and
-                  real-time weather and news updates through advanced API
-                  integration, showcasing innovative automation and data-driven
-                  responses.
+                  Created an AI chatbot (draft version to create a personal
+                  assistant) using Python, handling tasks like window and app
+                  opening, Instagram login, and real-time weather and news
+                  updates through API integration.
                 </p>
                 <a
                   href="https://github.com/abdullahmunir24/Personal-Chatbot"

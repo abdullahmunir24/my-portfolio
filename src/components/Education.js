@@ -25,13 +25,15 @@ export default function Education() {
 
                 <div className="space">
                   Recipient of UBC's International Major Entrance Scholarship
-                  (IMES)(Top 2%), a prestigious 50% scholarship awarded to
-                  international students based on exceptional academic and
-                  extracurricular achievements.
+                  (IMES), a prestigious 50% scholarship awarded to international
+                  students based on exceptional academic and extracurricular
+                  achievements.
                 </div>
 
+                <div className="space">GPA: 85.7%</div>
+
                 <div>
-                  Placed on the Dean's List(Top 5%) for exceptional academic
+                  Placed on the Dean's List for exceptional academic
                   performance.
                 </div>
               </div>

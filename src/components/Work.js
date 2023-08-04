@@ -62,10 +62,7 @@ export default function Education() {
                       <div className="timeline-year">May’21 – May’22</div>
                       <h3 className="title">Web Developer</h3>
                       <h3 className="title">TerraFirmaInternational</h3>
-                      <h4 className="title">
-                        {" "}
-                        Brooklyn, New York(Virtual Role)
-                      </h4>
+                      <h4 className="title"> New York, USA(Virtual Role)</h4>
                       <div className="description">
                         <div>
                           Independently developed and built a comprehensive
@@ -91,22 +88,16 @@ export default function Education() {
                       <div className="timeline-icon">
                         <i className="fas fa-code-branch"></i>
                       </div>
-                      <div className="timeline-year">Jun’23 – Present</div>
-                      <h3 className="title">Data Analyst Intern</h3>
+                      <div className="timeline-year">Jun’23 – Aug’23</div>
+                      <h3 className="title">Summer Intern</h3>
                       <h3 className="title">Bazaar Technologies</h3>
                       <h4 className="title">Karachi,Pakistan</h4>
                       <p className="description">
-                        During my impactful internship at Bazaar Technologies, a
-                        leading Karachi startup, I excelled as a data analyst,
-                        playing a vital role in the development of the
-                        cutting-edge project, Ghalib. Collaboratively, I honed
-                        my SQL and Tableau skills while writing queries to
-                        implement critical functionalities on Ghalib, an
-                        innovative software that streamlines data analysis for
-                        non-technical business users. With its intuitive
-                        filtering options, Ghalib empowers users to effortlessly
-                        access relevant information, fostering a data-driven
-                        decision-making culture.
+                        Bazaar Technologies is Pakistan’s upcoming startup,
+                        Series B funded. During my internship I build out
+                        simplified interface program from scratch enabling
+                        non-technical users to leverage SQL without requiring
+                        coding / technical skills.
                       </p>
                     </a>
                   </div>
