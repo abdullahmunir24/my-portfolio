@@ -88,7 +88,7 @@ export default function Education() {
                       <div className="timeline-icon">
                         <i className="fas fa-code-branch"></i>
                       </div>
-                      <div className="timeline-year">Jun’23 – Aug’23</div>
+                      <div className="timeline-year">Jun’23–Aug’23</div>
                       <h3 className="title">Summer Intern</h3>
                       <h3 className="title">Bazaar Technologies</h3>
                       <h4 className="title">Karachi,Pakistan</h4>
