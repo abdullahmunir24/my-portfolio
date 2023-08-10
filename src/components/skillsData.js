@@ -20,11 +20,7 @@ const skillsData = [
     name: "React.js",
     image: require("../images/react-1-logo-png-transparent.png"),
   },
-  {
-    id: 8,
-    name: "Node.js",
-    image: require("../images/png-transparent-javascript-logo-angularjs-nodejs-computer-programming-web-development-computer-software-jquery-yellow.png"),
-  },
+
   { id: 9, name: "Bootstrap", image: require("../images/bootsrap.jpeg") },
   { id: 10, name: "TailWind CSS", image: require("../images/tailwind.png") },
 
