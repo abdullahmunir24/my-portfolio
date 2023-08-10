@@ -14,6 +14,58 @@ export default function Education() {
                 <div className="education-timeline">
                   <div className="timeline">
                     <a
+                      href="https://www.bazaartech.com"
+                      target="_blank"
+                      className="timeline-content"
+                    >
+                      <div className="timeline-icon">
+                        <i className="fas fa-code-branch"></i>
+                      </div>
+                      <div className="timeline-year">Jun’23–Aug’23</div>
+                      <h3 className="title">Summer Intern</h3>
+                      <h3 className="title">Bazaar Technologies</h3>
+                      <h4 className="title">Karachi,Pakistan</h4>
+                      <p className="description">
+                        Bazaar Technologies is Pakistan’s upcoming startup,
+                        Series B funded. During my internship I build out
+                        simplified interface program from scratch enabling
+                        non-technical users to leverage SQL without requiring
+                        coding / technical skills.
+                      </p>
+                    </a>
+                  </div>
+
+                  <div className="timeline">
+                    <a
+                      href="https://terrafirmainternational.org"
+                      target="blank"
+                      className="timeline-content"
+                    >
+                      <div className="timeline-icon">
+                        <i className="fas fa-code"></i>
+                      </div>
+                      <div className="timeline-year">May’21 – May’22</div>
+                      <h3 className="title">Web Developer</h3>
+                      <h3 className="title">TerraFirmaInternational</h3>
+                      <h4 className="title"> New York, USA(Virtual Role)</h4>
+                      <div className="description">
+                        <div>
+                          Independently developed and built a comprehensive
+                          website from scratch for an NGO assisting refugee
+                          minors in Athens,Greece, resulting in significant
+                          engagement with over 200+ donors and more than 10K
+                          partners in the past year.
+                        </div>
+                        <div className="description">
+                          Refined, improved and enriched the content on the
+                          website improving engagement time spent per partner
+                          from 23 minutes to 39 minutes weekly.
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="timeline">
+                    <a
                       href="https://www.amazon.com"
                       target="blank"
                       className="timeline-content"
@@ -50,57 +102,6 @@ export default function Education() {
                       </p>
                     </a>
                   </div>
-                  <div className="timeline">
-                    <a
-                      href="https://terrafirmainternational.org"
-                      target="blank"
-                      className="timeline-content"
-                    >
-                      <div className="timeline-icon">
-                        <i className="fas fa-code"></i>
-                      </div>
-                      <div className="timeline-year">May’21 – May’22</div>
-                      <h3 className="title">Web Developer</h3>
-                      <h3 className="title">TerraFirmaInternational</h3>
-                      <h4 className="title"> New York, USA(Virtual Role)</h4>
-                      <div className="description">
-                        <div>
-                          Independently developed and built a comprehensive
-                          website from scratch for an NGO assisting refugee
-                          minors in Athens,Greece, resulting in significant
-                          engagement with over 200+ donors and more than 10K
-                          partners in the past year.
-                        </div>
-                        <div className="description">
-                          Refined, improved and enriched the content on the
-                          website improving engagement time spent per partner
-                          from 23 minutes to 39 minutes weekly.
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div className="timeline">
-                    <a
-                      href="https://www.bazaartech.com"
-                      target="_blank"
-                      className="timeline-content"
-                    >
-                      <div className="timeline-icon">
-                        <i className="fas fa-code-branch"></i>
-                      </div>
-                      <div className="timeline-year">Jun’23–Aug’23</div>
-                      <h3 className="title">Summer Intern</h3>
-                      <h3 className="title">Bazaar Technologies</h3>
-                      <h4 className="title">Karachi,Pakistan</h4>
-                      <p className="description">
-                        Bazaar Technologies is Pakistan’s upcoming startup,
-                        Series B funded. During my internship I build out
-                        simplified interface program from scratch enabling
-                        non-technical users to leverage SQL without requiring
-                        coding / technical skills.
-                      </p>
-                    </a>
-                  </div>
 
                   <div className="timeline">
                     <a
@@ -111,7 +112,7 @@ export default function Education() {
                       <div className="timeline-icon">
                         <i className="fas fa-code"></i>
                       </div>
-                      <div className="timeline-year">Jun’21</div>
+                      <div className="timeline-year">Jun’21-Jul’21</div>
                       <h3 className="title">Enginnering Intern</h3>
                       <h3 className="title">Linked Things</h3>
                       <h4 className="title">Karachi, Pakistan</h4>
