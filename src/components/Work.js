@@ -97,7 +97,7 @@ export default function Education() {
                           accessories. The model was used by technical product
                           manager in Amazon to create browse nodes for head
                           brands improving shopping experience and conversion by
-                          0.7%.
+                          0.5%.
                         </div>
                       </p>
                     </a>
