@@ -46,7 +46,7 @@ export default function Education() {
                       </div>
                       <div className="timeline-year">May’21 – May’22</div>
                       <h3 className="title">Web Developer</h3>
-                      <h3 className="title">TerraFirmaInternational</h3>
+                      <h3 className="title">Terra Firma International</h3>
                       <h4 className="title"> New York, USA(Virtual Role)</h4>
                       <div className="description">
                         <div>
