@@ -75,9 +75,10 @@ export default function Projects() {
                 <h3>Personal Chatbot(July 2023)</h3>
                 <p>
                   Created an AI chatbot (draft version to create a personal
-                  assistant) using Python, handling tasks like window and app
-                  opening, Instagram login, and real-time weather and news
-                  updates through API integration.
+                  assistant) using Python, handling tasks like websites and app
+                  opening, Instagram login, engaging in conversations, answering
+                  questions and providing real-time weather and news updates
+                  through API integration.
                 </p>
                 <a
                   href="https://github.com/abdullahmunir24/Personal-Chatbot"
