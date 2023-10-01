@@ -31,7 +31,7 @@ export default function Projects() {
             <div className="work">
               <img src={require("../images/recipe.jpg")} />
               <div className="layer">
-                <h3>SavorySmart (Jul 2023 - Present)</h3>
+                <h3>SavorySmart (Aug 2023 - Present)</h3>
                 <p>
                   Crafting a versatile recipe website with React, Firebase, and
                   APIs, offering an experience with features like recipe
@@ -50,7 +50,7 @@ export default function Projects() {
             <div className="work">
               <img src={require("../images/app.jpg")} />
               <div className="layer">
-                <h3>HandyHelp(July 2023 - Present)</h3>
+                <h3>HandyHelp(Aug 2023 - Present)</h3>
                 <p>
                   Built a mobile app with React Native and Firebase to connect
                   blue-collar workers for job opportunities within Pakistan. The

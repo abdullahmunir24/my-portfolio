@@ -1,14 +1,13 @@
 import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
-import './Footer.css';
+import "./Footer.css";
 
 export default function Footer() {
   const form = useRef();
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,37 +17,56 @@ export default function Footer() {
     formData.append("user_email", email);
     const templateParams = Object.fromEntries(formData);
 
-    emailjs.send(
-      process.env.REACT_APP_SERVICE_ID,
-      process.env.REACT_APP_TEMPLATE_ID,
-      templateParams,
-      process.env.REACT_APP_USER_ID
-    )
+    emailjs
+      .send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_USER_ID
+      )
       .then((response) => {
         if (response.status === 200) {
-          setFullName('');
-          setEmail('');
-          setMessage('');
+          setFullName("");
+          setEmail("");
+          setMessage("");
           setShowSuccessMessage(true);
 
           setTimeout(() => {
             setShowSuccessMessage(false);
           }, 4000);
         } else {
-          console.log('Error:', response.text);
+          console.log("Error:", response.text);
         }
       })
       .catch((error) => {
-        console.log('Error:', error);
+        console.log("Error:", error);
       });
   };
 
   return (
     <section id="contact">
       <div className="social">
-        <a href="https://www.instagram.com/_abdullahmunir_/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-        <a href="https://github.com/abdullahmunir24" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/abdullah-munir-b06a17250/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+        <a
+          href="https://www.instagram.com/_abdullahmunir_/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://github.com/abdullahmunir24"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/abdullah-munir-b06a17250/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-linkedin"></i>
+        </a>
       </div>
       <div className="contact-box">
         <div className="c-heading">
@@ -57,32 +75,52 @@ export default function Footer() {
         </div>
         <div className="c-inputs">
           <form ref={form} onSubmit={sendEmail}>
-            <input type="text" name="fullName" placeholder="Full Name" value={fullName} onChange={(e) => setFullName(e.target.value)} required />
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              required
+            />
             <input
               type="email"
               placeholder="example@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               name="email"
-              required />
-            <textarea name="message" placeholder="Write Message" value={message} onChange={(e) => setMessage(e.target.value)} required />
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Write Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            />
             <div className="contact-info">
               <div>
                 <i className="fas fa-phone"></i>
-                <span className="phone-link">+1 250 864 8491</span>
+                <span className="phone-link">+1 236 457 3130</span>
               </div>
               <div>
                 <i className="fas fa-envelope"></i>
-                <a href="mailto:abdullahmunir2004@gmail.com" className="email-link">abdullahmunir2004@gmail.com</a>
-
-
-
+                <a
+                  href="mailto:abdullahmunir2004@gmail.com"
+                  className="email-link"
+                >
+                  abdullahmunir2004@gmail.com
+                </a>
               </div>
             </div>
             {showSuccessMessage ? (
               <div>
-                <p className="success-message">Thank you for your submission!</p>
-                <p className="success-message">A confirmation email has been sent to your email address.</p>
+                <p className="success-message">
+                  Thank you for your submission!
+                </p>
+                <p className="success-message">
+                  A confirmation email has been sent to your email address.
+                </p>
               </div>
             ) : (
               <button type="submit" className="custom-button">
@@ -94,10 +132,10 @@ export default function Footer() {
       </div>
       <div className="map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567.6630910800022!2d-119.39900602328466!3d49.942662671499626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537ded7e7d26f175%3A0x9d6ca9356178cbd9!2s1290%20International%20Mews%2C%20Kelowna%2C%20BC%20V1V%201V8%2C%20Canada!5e0!3m2!1sen!2s!4v1688746515161!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2078.44761683052!2d-119.40083405099692!3d49.940976996059035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537df2820629e4e1%3A0xa9d3329979562b19!2s3174%20Lower%20Residence%20Ln%2C%20Kelowna%2C%20BC%20V1V%201V8!5e0!3m2!1sen!2sca!4v1696203611156!5m2!1sen!2sca"
           width="600"
           height="450"
-          style={{ border: '0' }}
+          style={{ border: "0" }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
