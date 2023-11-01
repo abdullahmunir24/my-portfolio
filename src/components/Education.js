@@ -30,8 +30,6 @@ export default function Education() {
                   achievements.
                 </div>
 
-                <div className="space">GPA: 85.7%</div>
-
                 <div>
                   Placed on the Dean's List for exceptional academic
                   performance.
