@@ -132,13 +132,13 @@ export default function Footer() {
       </div>
       <div className="map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2078.44761683052!2d-119.40083405099692!3d49.940976996059035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537df2820629e4e1%3A0xa9d3329979562b19!2s3174%20Lower%20Residence%20Ln%2C%20Kelowna%2C%20BC%20V1V%201V8!5e0!3m2!1sen!2sca!4v1696203611156!5m2!1sen!2sca"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164477.36692580467!2d-119.61958508788803!3d49.89957571728325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537d8cb6e3c730b3%3A0x4ef8e53ddab4c4f7!2sKelowna%2C%20BC!5e0!3m2!1sen!2sca!4v1698862475364!5m2!1sen!2sca"
           width="600"
           height="450"
-          style={{ border: "0" }}
-          allowFullScreen=""
+          style="border:0;"
+          allowfullscreen=""
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
+          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </section>
