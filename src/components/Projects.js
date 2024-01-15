@@ -50,14 +50,14 @@ export default function Projects() {
             <div className="work">
               <img src={require("../images/HH.png")} />
               <div className="layer">
-                <h3>HandyHelp(Aug 2023 - Present)</h3>
+                <h3>HandyHelp(Dec 2023 - Present)</h3>
                 <p>
                   Built a mobile app with React Native and Firebase to connect
                   blue-collar workers for job opportunities within Pakistan. The
                   business model is to build a market place to match freelance
                   labor with local demand. The model is similar to TaskRabbit
                   (US) or Airtasker (AU). It is a personal project, work in
-                  progress as I started in October 2023 driven by macro economic
+                  progress as I started in 2023 driven by macro economic
                   situation in Pakistan and current market gap.
                 </p>
                 <a
