@@ -29,9 +29,9 @@ export default function Projects() {
             </div>
 
             <div className="work">
-              <img src={require("../images/recipe.jpg")} />
+              <img src={require("../images/SS.png")} />
               <div className="layer">
-                <h3>SavorySmart (Aug 2023 - Present)</h3>
+                <h3>SavorySmart (Aug 2023 - Oct 2023)</h3>
                 <p>
                   Crafting a versatile recipe website with React, Firebase, and
                   APIs, offering an experience with features like recipe
@@ -48,7 +48,7 @@ export default function Projects() {
             </div>
 
             <div className="work">
-              <img src={require("../images/app.jpg")} />
+              <img src={require("../images/HH.png")} />
               <div className="layer">
                 <h3>HandyHelp(Aug 2023 - Present)</h3>
                 <p>
@@ -57,7 +57,7 @@ export default function Projects() {
                   business model is to build a market place to match freelance
                   labor with local demand. The model is similar to TaskRabbit
                   (US) or Airtasker (AU). It is a personal project, work in
-                  progress as I started in June 2023 driven by macro economic
+                  progress as I started in October 2023 driven by macro economic
                   situation in Pakistan and current market gap.
                 </p>
                 <a
