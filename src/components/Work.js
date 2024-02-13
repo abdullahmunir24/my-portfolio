@@ -37,7 +37,7 @@ export default function Education() {
 
                   <div className="timeline">
                     <a
-                      href="https://terrafirmainternational.org"
+                      href="https://www.linkedin.com/company/terra-firma-international/about/"
                       target="blank"
                       className="timeline-content"
                     >
