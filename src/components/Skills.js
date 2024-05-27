@@ -15,7 +15,7 @@ const Skills = ({ skills }) => {
     return () => {
       clearInterval(autoplay);
     };
-  }, []);
+  }, [currentIndex]);
 
   const handleNext = () => {
     const nextIndex = currentIndex + 1;
@@ -34,7 +34,7 @@ const Skills = ({ skills }) => {
   ];
 
   const programmingLanguages = skills.filter((skill) =>
-    ["Python", "Java", "JavaScript"].includes(skill.name)
+    ["Python", "Java", "JavaScript", "C++", "C#"].includes(skill.name)
   );
 
   const webDevelopment = skills.filter((skill) =>
@@ -46,6 +46,7 @@ const Skills = ({ skills }) => {
       "Firebase",
       "Bootstrap",
       "TailWind CSS",
+      "MongoDB",
     ].includes(skill.name)
   );
 
@@ -62,11 +63,20 @@ const Skills = ({ skills }) => {
   );
 
   const appDevelopment = skills.filter((skill) =>
-    ["Swift", "React Native"].includes(skill.name)
+    ["Swift", "React Native", "Unity"].includes(skill.name)
   );
 
   const toolsAndTechnologies = skills.filter((skill) =>
-    ["GitHub", "VS Code", "Eclipse", "PyCharm"].includes(skill.name)
+    [
+      "GitHub",
+      "VS Code",
+      "Eclipse",
+      "PyCharm",
+      "Jupyter Notebook",
+      "Xcode",
+      "Netlify",
+      "AWS",
+    ].includes(skill.name)
   );
 
   const certifications = skills.filter((skill) =>

@@ -21,7 +21,9 @@ export default function Education() {
               </div>
               <div className="timeline-content">
                 <h5 className="title">The University of British Columbia</h5>
-                <div className="space">Major: Computer Science</div>
+                <div className="space">
+                  Bachelor of Science in Computer Science
+                </div>
 
                 <div className="space">
                   Recipient of UBC's International Major Entrance Scholarship
@@ -31,8 +33,11 @@ export default function Education() {
                 </div>
 
                 <div>
-                  Placed on the Dean's List for exceptional academic
-                  performance.
+                  Received Dean's Honour List for the 2022-2023 Academic Year.
+                </div>
+                <div>
+                  {" "}
+                  Received Dean's Honour List for the 2023-2024 Academic Year.
                 </div>
               </div>
             </div>

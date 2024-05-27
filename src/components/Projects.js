@@ -33,10 +33,12 @@ export default function Projects() {
               <div className="layer">
                 <h3>SavorySmart (Aug 2023 - Oct 2023)</h3>
                 <p>
-                  Crafting a versatile recipe website with React, Firebase, and
-                  APIs, offering an experience with features like recipe
-                  display, advanced search, ingredient info, nutritional
-                  analysis, and customizable meals.
+                  Crafted a recipe website using React.js with features like
+                  recipe search, nearby restaurant search, ingredient info,
+                  nutritional analysis, and meal plan generation using APIs.
+                  Deployed Firebase authentication for secure sign-ups/logins,
+                  enhancing user experience and access to meal planning
+                  features.
                 </p>
                 <a
                   href="https://github.com/abdullahmunir24/FoodWebsite"
@@ -48,20 +50,20 @@ export default function Projects() {
             </div>
 
             <div className="work">
-              <img src={require("../images/HH.png")} />
+              <img src={require("../images/TidyLink.png")} />
               <div className="layer">
-                <h3>HandyHelp(Dec 2023 - Present)</h3>
+                <h3>TidyLink(Dec 2023 - April 2024)</h3>
                 <p>
-                  Built a mobile app with React Native and Firebase to connect
-                  blue-collar workers for job opportunities within Pakistan. The
-                  business model is to build a market place to match freelance
-                  labor with local demand. The model is similar to TaskRabbit
-                  (US) or Airtasker (AU). It is a personal project, work in
-                  progress as I started in 2023 driven by macro economic
-                  situation in Pakistan and current market gap.
+                  Built a mobile app usign React Native and Expo to connect
+                  blue-collar workers with job opportunities within Pakistan,
+                  targeting a market of 8.5 Million domestic workers.
+                  Implemented Firebase Authentication for secure sign-ups and
+                  profile creation, with data stored in Firestore. Enhanced the
+                  app with area-based profile viewing and an integrated chat
+                  system, projected to increase job matching efficiency by 30%.
                 </p>
                 <a
-                  href="https://github.com/abdullahmunir24/final-app"
+                  href="https://github.com/abdullahmunir24/TidyLink"
                   target="blank"
                 >
                   <i className="fas fa-external-link-alt"></i>
@@ -74,11 +76,11 @@ export default function Projects() {
               <div className="layer">
                 <h3>Personal Chatbot(July 2023)</h3>
                 <p>
-                  Created an AI chatbot (draft version to create a personal
-                  assistant) using Python, handling tasks like websites and app
-                  opening, Instagram login, engaging in conversations, answering
-                  questions and providing real-time weather and news updates
-                  through API integration.
+                  Programmed an AI chatbot (draft version of a personal
+                  assistant) in Python to open websites and apps, log into
+                  Instagram, engage in conversations, answer questions, and
+                  provide real-time weather and news updates via API
+                  integration.
                 </p>
                 <a
                   href="https://github.com/abdullahmunir24/Personal-Chatbot"
@@ -97,12 +99,11 @@ export default function Projects() {
                   - Apr 2023)
                 </h3>
                 <p>
-                  Collaborated with two other team members in a group project,
-                  utilizing pandas, seaborn, matplotlib, and tableau to analyze
-                  extensive health cost data in the United States such as the
-                  impact of smoking behaviour on medical costs and the
-                  relationship between BMI, region, and gender in the USA on
-                  health costs.
+                  Collaborated with two other team members, to analyze health
+                  cost data in the USA using pandas, seaborn, matplotlib, and
+                  tableau, including the impact of smoking on medical costs and
+                  the relationship between BMI, region, and gender on health
+                  costs.
                 </p>
                 <a
                   href="https://github.com/ubco-W2022T2-data301/project-group-group40"
