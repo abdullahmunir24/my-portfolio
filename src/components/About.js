@@ -93,15 +93,12 @@ export default function About() {
           <div className="content-container" ref={ref}>
             <h1 className="custom-title">About Me</h1>
             <p className="custom-description">
-              As a computer science major at UBC, I bring exceptional
-              programming skills in Java and Python, coupled with a keen
-              aptitude for Machine Learning, App and Web Development. My
-              enthusiasm lies in leveraging AI technologies to revolutionize the
-              consumer space, driven by a passion for enhancing user experiences
-              at scale. Inspired by Generative AI, I am eager to contribute my
-              expertise and drive innovation in a software engineering role.
-              Let's collaborate to create groundbreaking solutions and make a
-              lasting impact!
+              As a computer science major at UBC, I have strong programming
+              skills in Java and Python, along with a keen interest in Machine
+              Learning, App and Web Development. I am passionate about
+              leveraging AI technologies to enhance the consumer experience.
+              Inspired by Generative AI, I am eager to apply my expertise in a
+              software engineering role.
             </p>
             <div className="button-container">
               <button

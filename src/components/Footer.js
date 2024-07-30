@@ -62,7 +62,7 @@ export default function Footer() {
             <i className="fab fa-github"></i>
           </a>
           <a
-            href="https://www.linkedin.com/in/abdullah-munir-b06a17250/"
+            href="www.linkedin.com/in/abdullahmunir24"
             target="_blank"
             rel="noopener noreferrer"
           >
