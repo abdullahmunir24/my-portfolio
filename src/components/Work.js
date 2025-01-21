@@ -121,40 +121,6 @@ export default function Work() {
 
                   <div className="timeline">
                     <a
-                      href="https://www.amazon.com"
-                      target="blank"
-                      className="timeline-content"
-                    >
-                      <div className="timeline-icon">
-                        <i className="fas fa-code-branch"></i>
-                      </div>
-                      <div className="timeline-year">Aug 2021 – Sep 2021</div>
-                      <h3 className="title">Data Analyst Intern</h3>
-                      <h3 className="title">Amazon</h3>
-                      <h4 className="title">Sydney, Australia (Remote Role)</h4>
-                      <div className="description">
-                        Analyzed feedback of refurbished products to help
-                        business relaunch the refurbished business in Amazon
-                        Australia. Identified the need to add three extra
-                        competitors to increase price competitiveness.
-                      </div>
-                      <div className="description">
-                        Benchmarked refurbished brands sold in Spain and Mexico
-                        (parity countries with Australia) and identified
-                        opportunities to onboard and prioritise top brands such
-                        as Lenovo, HP, and Bose.
-                      </div>
-                      <div className="description">
-                        Built an excel model to segment head brands from
-                        accessories. The model was used by technical product
-                        manager in Amazon to create browse nodes for head brands
-                        improving shopping experience and conversion by 0.5%.
-                      </div>
-                    </a>
-                  </div>
-
-                  <div className="timeline">
-                    <a
                       href="https://linkedthings.ai"
                       target="blank"
                       className="timeline-content"
