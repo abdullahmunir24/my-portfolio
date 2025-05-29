@@ -13,16 +13,27 @@
     "@testing-library/user-event": "^13.5.0",
     "emailjs-com": "^3.2.0",
     "maath": "^0.10.8",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.16.0",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
     "react-transition-group": "^4.4.5",
-    "styled-components": "^6.1.15",
+    "styled-components": "^5.3.11",
     "three": "^0.174.0",
     "typed.js": "^2.0.16",
     "web-vitals": "^2.1.4"
+  },
+  "overrides": {
+    "ajv": "6.12.6",
+    "ajv-keywords": "3.5.2",
+    "schema-utils": "2.7.1",
+    "workbox-build": {
+      "ajv": "6.12.6"
+    },
+    "@pmmmwh/react-refresh-webpack-plugin": {
+      "schema-utils": "2.7.1"
+    }
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,10 +58,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "overrides": {
-    "ajv": "^6.12.6",
-    "ajv-keywords": "^3.5.2",
-    "ajv-formats": "^1.6.1"
   }
 }
