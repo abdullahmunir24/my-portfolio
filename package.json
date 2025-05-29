@@ -19,7 +19,7 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
     "react-transition-group": "^4.4.5",
-    "styled-components": "^6.1.15",
+    "styled-components": "^5.3.11",
     "three": "^0.174.0",
     "typed.js": "^2.0.16",
     "web-vitals": "^2.1.4"
