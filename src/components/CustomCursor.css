@@ -1,0 +1,57 @@
+.custom-cursor {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-dark);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor-border {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--accent-dark);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  transform: translate(-50%, -50%);
+}
+
+#light .custom-cursor {
+  background: var(--accent-light);
+}
+
+#light .custom-cursor-border {
+  border-color: var(--accent-light);
+}
+
+/* Add animation when hovering interactive elements */
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+a:hover ~ .custom-cursor-border,
+button:hover ~ .custom-cursor-border {
+  transform: translate(-50%, -50%) scale(0.8);
+  background: rgba(138, 43, 226, 0.1);
+}
+
+#light a:hover ~ .custom-cursor-border,
+#light button:hover ~ .custom-cursor-border {
+  background: rgba(113, 67, 129, 0.1);
+}
+
+@media (max-width: 768px) {
+  .custom-cursor,
+  .custom-cursor-border {
+    display: none;
+  }
+}

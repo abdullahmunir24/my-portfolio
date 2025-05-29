@@ -1,26 +1,22 @@
-import React, { createContext, useState } from 'react';
+import React, { Suspense, lazy } from 'react';
 import Header from './components/header';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Footer from './components/Footer';
-import Work from './components/Education';
-import Education from './components/Work';
+import CustomCursor from './components/CustomCursor';
 import skillsData from './components/skillsData';
 import "./App.css";
 
-export const ThemeContext = createContext(null);
+// Lazy load components for better initial load performance
+const About = lazy(() => import('./components/About'));
+const Projects = lazy(() => import('./components/Projects'));
+const Skills = lazy(() => import('./components/Skills'));
+const Footer = lazy(() => import('./components/Footer'));
+const Work = lazy(() => import('./components/Work'));
+const Education = lazy(() => import('./components/Education'));
 
 function App() {
-  const [theme, setTheme] = useState("dark");
-
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
-  };
-
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App" id={theme}>
+    <div className="App" id="dark">
+      <CustomCursor />
+      <Suspense fallback={<div className="loading">Loading...</div>}>
         <Header />
         <About />
         <Work />
@@ -28,8 +24,8 @@ function App() {
         <Skills skills={skillsData} />
         <Projects />
         <Footer />
-      </div>
-    </ThemeContext.Provider>
+      </Suspense>
+    </div>
   );
 }
 

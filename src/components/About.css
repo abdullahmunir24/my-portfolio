@@ -163,3 +163,411 @@
     text-align: center;
   }
 }
+
+/* About section styling - improved visibility and light theme */
+#about {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0; /* Reduced padding */
+}
+
+.about-container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(45deg, var(--accent-dark), var(--highlight-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+}
+
+#light .section-title {
+  background: linear-gradient(45deg, var(--accent-light), var(--highlight-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Modern content layout */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.about-image-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease;
+}
+
+.about-image-container.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+#light .about-image-wrapper {
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);
+}
+
+.about-image-wrapper:hover {
+  transform: translateY(-10px);
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.about-image-wrapper:hover .about-image {
+  transform: scale(1.05);
+}
+
+.about-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(138, 43, 226, 0.7), transparent);
+  opacity: 0.8;
+  transition: height 0.5s ease;
+}
+
+#light .about-image-overlay {
+  background: linear-gradient(to top, rgba(124, 58, 237, 0.7), transparent);
+}
+
+.about-image-wrapper:hover .about-image-overlay {
+  height: 60%;
+}
+
+/* Text content styling */
+.about-text-container {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.5s ease 0.2s;
+}
+
+.about-text-container.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-description {
+  margin-bottom: 30px;
+}
+
+.about-description p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#light .about-description p {
+  color: rgba(26, 32, 44, 0.9);
+}
+
+/* Button tabs styling - improved for light theme */
+.about-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.about-tab-button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  color: inherit;
+  border-radius: 50px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(10px);
+}
+
+#light .about-tab-button {
+  background: var(--surface-light);
+  border: 1px solid var(--border-light);
+  color: var(--text-light);
+  box-shadow: 0 2px 10px rgba(124, 58, 237, 0.08);
+}
+
+.about-tab-button:hover {
+  background: rgba(138, 43, 226, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+}
+
+#light .about-tab-button:hover {
+  background: rgba(124, 58, 237, 0.1);
+  border-color: var(--accent-light);
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.15);
+}
+
+.about-tab-button.active {
+  background: linear-gradient(45deg, var(--accent-dark), var(--highlight-dark));
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+#light .about-tab-button.active {
+  background: linear-gradient(45deg, var(--accent-light), var(--highlight-light));
+  color: white;
+  box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4);
+}
+
+.button-icon {
+  font-size: 1.2rem;
+}
+
+/* Info display styling - improved for light theme */
+.about-info-container {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  margin-top: 20px;
+}
+
+#light .about-info-container {
+  background: var(--surface-light);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.08);
+}
+
+.info-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, var(--accent-dark), var(--highlight-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+#light .info-title {
+  background: linear-gradient(to right, var(--accent-light), var(--highlight-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.info-icon {
+  font-size: 1.8rem;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(138, 43, 226, 0.1);
+  border-radius: 50%;
+  padding: 8px;
+  margin-top: 2px;
+}
+
+#light .info-icon {
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.info-text {
+  flex: 1;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#light .info-text {
+  color: rgba(26, 32, 44, 0.9);
+}
+
+.info-text strong {
+  color: var(--highlight-dark);
+  font-weight: 600;
+}
+
+#light .info-text strong {
+  color: var(--highlight-light);
+}
+
+/* Animation classes */
+.about-image-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.about-image-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-info-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  max-height: 0;
+}
+
+.about-info-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1000px;
+  transition: opacity 0.5s ease, transform 0.5s ease, max-height 0.7s ease;
+}
+
+.about-info-exit {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1000px;
+}
+
+.about-info-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  max-height: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease, max-height 0.7s ease;
+}
+
+/* Decorative shapes - improved for light theme */
+.shape {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.1;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--accent-dark) 0%, transparent 70%);
+  bottom: -100px;
+  left: -150px;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--highlight-dark) 0%, transparent 70%);
+  top: 50px;
+  right: -100px;
+  animation: morph 15s linear infinite alternate;
+}
+
+#light .shape-1 {
+  background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+  opacity: 0.15;
+}
+
+#light .shape-2 {
+  background: radial-gradient(circle, var(--highlight-light) 0%, transparent 70%);
+  opacity: 0.15;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    padding: 30px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-description p {
+    font-size: 1rem;
+  }
+
+  .about-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-tab-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .info-item {
+    gap: 12px;
+  }
+
+  .info-icon {
+    min-width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+}

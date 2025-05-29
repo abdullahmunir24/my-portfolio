@@ -59,3 +59,471 @@
   margin-top: 30px;
 }
 
+/* Modern Skills Section Styling */
+.skills-section {
+  position: relative;
+  padding: 30px 0; /* Reduced padding */
+  background: transparent;
+  overflow: hidden;
+}
+
+.section-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.05) 0%, rgba(0, 217, 255, 0.05) 100%);
+  z-index: -1;
+}
+
+#light .section-background {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px; /* Reduced margin */
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-title.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.highlight-text {
+  background: linear-gradient(45deg, var(--accent-dark), var(--highlight-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#light .highlight-text {
+  background: linear-gradient(45deg, var(--accent-light), var(--highlight-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Carousel styling - improved for light theme */
+.skills-carousel {
+  width: 100%;
+  max-width: 1000px; 
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+}
+
+.custom-carousel {
+  padding: 20px 0;
+}
+
+/* Override carousel button styling - much better for light theme */
+.rec.rec-arrow {
+  background-color: rgba(138, 43, 226, 0.1);
+  color: var(--accent-dark);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.rec.rec-arrow:hover {
+  background-color: var(--accent-dark);
+  color: white;
+  transform: scale(1.1);
+}
+
+#light .rec.rec-arrow {
+  background-color: var(--surface-light);
+  color: var(--accent-light);
+  border: 2px solid var(--border-light);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.15);
+}
+
+#light .rec.rec-arrow:hover {
+  background-color: var(--accent-light);
+  color: white;
+  border-color: var(--accent-light);
+  box-shadow: 0 6px 25px rgba(124, 58, 237, 0.3);
+}
+
+/* Pagination dots - improved for light theme */
+.rec.rec-dot {
+  background-color: rgba(138, 43, 226, 0.3);
+  box-shadow: none;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.rec.rec-dot.rec-dot_active {
+  background-color: var(--accent-dark);
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+  transform: scale(1.2);
+}
+
+#light .rec.rec-dot {
+  background-color: rgba(124, 58, 237, 0.3);
+}
+
+#light .rec.rec-dot.rec-dot_active {
+  background-color: var(--accent-light);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+}
+
+/* Carousel slide styling */
+.carousel-slide {
+  padding: 0 10px;
+  position: relative;
+  height: 100%;
+}
+
+.carousel-title {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--accent-dark);
+}
+
+#light .carousel-title {
+  color: var(--accent-light);
+}
+
+.carousel-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent-dark), var(--highlight-dark));
+  border-radius: 3px;
+}
+
+#light .carousel-title::after {
+  background: linear-gradient(to right, var(--accent-light), var(--highlight-light));
+}
+
+/* Horizontal layout for skills within each slide */
+.carousel-grid-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Skill items styling - optimized for carousel */
+.skill-item {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  width: 110px;
+  height: auto;
+  min-height: 130px;
+}
+
+#light .skill-item {
+  background: var(--surface-light);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.08);
+  color: var(--text-light);
+}
+
+.skill-item.animate-in {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.skill-icon-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+#light .skill-icon-container {
+  background-color: rgba(124, 58, 237, 0.1);
+}
+
+.skill-item:hover .skill-icon-container {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.skill-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover img {
+  transform: scale(1.15);
+}
+
+.skill-item h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: inherit;
+  margin: 0;
+  transition: color 0.3s ease;
+  line-height: 1.3;
+  text-align: center;
+}
+
+#light .skill-item h3 {
+  color: var(--text-light);
+}
+
+.skill-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  background: rgba(138, 43, 226, 0.1);
+  border-color: rgba(138, 43, 226, 0.3);
+}
+
+#light .skill-item:hover {
+  background: rgba(124, 58, 237, 0.05);
+  border-color: var(--accent-light);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.2);
+}
+
+/* Certification grid styling */
+.certification-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Certification item styling */
+.skill-item-cert {
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#light .skill-item-cert {
+  background: var(--surface-light);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1);
+}
+
+.skill-item-cert.animate-in {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.cert-image {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#light .cert-image {
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.15);
+}
+
+.skill-item-cert:hover .cert-image {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+#light .skill-item-cert:hover .cert-image {
+  box-shadow: 0 12px 35px rgba(124, 58, 237, 0.25);
+}
+
+.cert-title {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: inherit;
+  font-weight: 500;
+}
+
+/* Decorative elements */
+.skills-decoration-1,
+.skills-decoration-2 {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+  border-radius: 50%;
+}
+
+.skills-decoration-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--accent-dark) 0%, transparent 70%);
+  top: -100px;
+  right: -150px;
+  filter: blur(50px);
+}
+
+.skills-decoration-2 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--highlight-dark) 0%, transparent 70%);
+  bottom: -50px;
+  left: -100px;
+  filter: blur(40px);
+}
+
+#light .skills-decoration-1 {
+  background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+}
+
+#light .skills-decoration-2 {
+  background: radial-gradient(circle, var(--highlight-light) 0%, transparent 70%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 3D skill category styling */
+.skill-category-3d {
+  position: relative;
+  height: 200px; /* Reduced height */
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.skill-category-3d canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100px !important; /* Reduced height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 20px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .carousel-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-grid-horizontal {
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .skill-item {
+    width: 95px;
+    padding: 12px;
+    min-height: 115px;
+  }
+  
+  .skill-icon-container {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .skill-item h3 {
+    font-size: 0.8rem;
+  }
+  
+  .cert-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .rec.rec-arrow {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-grid-horizontal {
+    gap: 12px;
+    padding: 10px;
+  }
+  
+  .skill-item {
+    width: 85px;
+    min-height: 105px;
+  }
+  
+  .skill-icon-container {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .cert-image {
+    width: 160px;
+    height: 160px;
+  }
+}
+

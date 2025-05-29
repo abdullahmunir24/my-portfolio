@@ -1,3 +1,354 @@
+/* Modern design system with CSS variables */
+:root {
+  /* Dark theme colors */
+  --primary-dark: #121212;
+  --secondary-dark: #1e1e1e;
+  --accent-dark: #8a2be2; /* Vibrant purple */
+  --text-dark: #ffffff;
+  --highlight-dark: #00d9ff; /* Cyan highlight */
+  
+  /* Light theme colors - much improved */
+  --primary-light: #ffffff;
+  --secondary-light: #f8fafc;
+  --accent-light: #7c3aed; /* Better vibrant purple */
+  --text-light: #1a202c;
+  --highlight-light: #3b82f6; /* Better blue */
+  --surface-light: #ffffff;
+  --border-light: rgba(124, 58, 237, 0.1);
+
+  /* Animation & transition settings */
+  --transition-speed: 0.3s;
+  --animation-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --page-padding: 0 5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color var(--transition-speed) var(--animation-timing),
+              color var(--transition-speed) var(--animation-timing);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
 #light {
-  background-color: #714381;
+  background-color: var(--primary-light);
+  color: var(--text-light);
+}
+
+#dark {
+  background-color: var(--primary-dark);
+  color: var(--text-dark);
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global section spacing - much more compact */
+section {
+  padding: 10px 0; /* Reduced from 20px */
+  margin: 0; /* Removed margin completely */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced section titles */
+.section-title {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 0.8rem; /* Reduced from 1rem */
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.section-title .highlight-text {
+  display: block;
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--accent-dark), var(--highlight-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 1rem; /* Reduced from 1.5rem */
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards 0.2s;
+}
+
+/* Light theme variations */
+#light .section-title .highlight-text {
+  background: linear-gradient(45deg, var(--accent-light), var(--highlight-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#light .section-subtitle {
+  color: rgba(26, 32, 44, 0.7); /* Better contrast */
+}
+
+/* Section title styling */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem; /* Reduced from 1.5rem */
+  position: relative;
+  display: inline-block;
+}
+
+#light .section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 4px;
+  width: 50px;
+  background: var(--accent-light);
+}
+
+#dark .section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 4px;
+  width: 50px;
+  background: var(--accent-dark);
+}
+
+/* Standard container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; /* Reduced padding */
+}
+
+/* Utility animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Gradient background animation */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(90deg, var(--accent-dark), var(--highlight-dark), var(--accent-dark));
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+}
+
+#light .gradient-bg {
+  background: linear-gradient(90deg, var(--accent-light), var(--highlight-light), var(--accent-light));
+}
+
+/* Card styling - much improved for light theme */
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#light .card {
+  background-color: var(--surface-light);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.08);
+  color: var(--text-light);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+#light .card:hover {
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15);
+  border-color: var(--accent-light);
+}
+
+/* Button styling - improved for light theme */
+.modern-button {
+  background: linear-gradient(45deg, var(--accent-dark), var(--highlight-dark));
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+#light .modern-button {
+  background: linear-gradient(45deg, var(--accent-light), var(--highlight-light));
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+#light .modern-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  section {
+    padding: 20px 0;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+  }
+  
+  .section-title .highlight-text {
+    font-size: 3.2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    padding: 0 20px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Glass morphism effect - improved for light theme */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#light .glass {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border-light);
+  backdrop-filter: blur(20px);
+}
+
+/* Add loading animation */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-dark);
+  z-index: 9999;
+}
+
+.loading::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--accent-dark);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: loading 0.8s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#light .loading {
+  background: var(--primary-light);
+}
+
+#light .loading::after {
+  border-color: var(--accent-light);
+  border-top-color: transparent;
+}
+
+/* Section background gradients */
+.section-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+/* Keep sections much closer together */
+section + section {
+  margin-top: -20px; /* Increased negative margin to bring sections much closer */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

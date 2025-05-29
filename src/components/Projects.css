@@ -1,92 +1,457 @@
 #portolio {
   width: 100%;
-  
 }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    margin-top: 50px;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 50px;
   margin-bottom: 150px;
+  position: relative;
+  z-index: 2;
+}
+
+.sub-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Modern Projects Section Styling - Fixed Images */
+.projects-section {
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Section header styling */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.section-header.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-text {
+  background: linear-gradient(45deg, var(--accent-dark), var(--highlight-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#light .highlight-text {
+  background: linear-gradient(45deg, var(--accent-light), var(--highlight-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#light .section-subtitle {
+  color: rgba(26, 32, 44, 0.7);
+}
+
+/* Project filters - improved for light theme */
+.project-filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+}
+
+.project-filters.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.filter-button {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  color: inherit;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#light .filter-button {
+  background-color: var(--surface-light);
+  border: 1px solid var(--border-light);
+  color: var(--text-light);
+  box-shadow: 0 2px 10px rgba(124, 58, 237, 0.08);
+}
+
+.filter-button:hover {
+  background-color: rgba(138, 43, 226, 0.1);
+  transform: translateY(-3px);
+}
+
+#light .filter-button:hover {
+  background-color: rgba(124, 58, 237, 0.05);
+  border-color: var(--accent-light);
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.15);
+}
+
+.filter-button.active {
+  background: linear-gradient(45deg, var(--accent-dark), var(--highlight-dark));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+}
+
+#light .filter-button.active {
+  background: linear-gradient(45deg, var(--accent-light), var(--highlight-light));
+  color: white;
+  box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+}
+
+/* Work list - fixed grid with consistent sizing */
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+  opacity: 1; /* Always visible */
+  transform: translateY(0); /* Always positioned correctly */
+  transition: all 0.5s ease;
+  min-height: 300px; /* Ensure minimum height */
+}
+
+.work-list.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Work card styling - fixed for consistent sizing regardless of content count */
+.work-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  max-width: 450px; /* Maximum width constraint */
+  min-height: 500px; /* Minimum height for consistency */
+  display: flex;
+  flex-direction: column;
+  opacity: 1; /* Always visible */
+  transform: translateY(0); /* Always positioned correctly */
+  margin: 0 auto; /* Center cards when there's only one */
+}
+
+.work-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* When there's only one card, center it and limit its width */
+.work-list:has(.work-card:only-child) {
+  justify-content: center;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* Alternative approach for better browser support */
+.work-list.single-item {
+  justify-content: center;
+  max-width: 500px;
+  margin: 20px auto;
+  grid-template-columns: 1fr;
+}
+
+.work-list.single-item .work-card {
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Work image container - fixed sizing */
+.work-image {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Fixed height for consistency */
+  overflow: hidden;
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures proper scaling */
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.work-card:hover .work-image img {
+  transform: scale(1.05);
+}
+
+/* Work tags positioned over image */
+.work-tags {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.work-tag {
+  background: rgba(138, 43, 226, 0.9);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  backdrop-filter: blur(5px);
+}
+
+#light .work-tag {
+  background: rgba(124, 58, 237, 0.9);
+}
+
+/* Work content styling */
+.work-content {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.work-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: inherit;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.work-date {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(138, 43, 226, 0.1);
+  padding: 6px 12px;
+  border-radius: 15px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+#light .work-date {
+  color: rgba(26, 32, 44, 0.6);
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.work-description {
+  margin: 0 0 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+#light .work-description {
+  color: rgba(26, 32, 44, 0.8);
+}
+
+/* Project link button - improved styling */
+.work-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: rgba(138, 43, 226, 0.1);
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  border: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+#light .work-link {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--accent-light);
+  border: 1px solid var(--border-light);
+}
+
+.work-link:hover {
+  background: linear-gradient(45deg, var(--accent-dark), var(--highlight-dark));
+  color: white;
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+  transform: translateY(-2px);
+}
+
+#light .work-link:hover {
+  background: linear-gradient(45deg, var(--accent-light), var(--highlight-light));
+  color: white;
+  box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+}
+
+.work-link i {
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+}
+
+.work-link:hover i {
+  transform: translateX(5px);
+}
+
+/* No projects message */
+.no-projects {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+/* Decorative elements */
+.project-decoration-1,
+.project-decoration-2 {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.project-decoration-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent-dark) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+  filter: blur(80px);
+}
+
+.project-decoration-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--highlight-dark) 0%, transparent 70%);
+  bottom: -150px;
+  left: -150px;
+  filter: blur(60px);
+}
+
+#light .project-decoration-1 {
+  background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+}
+
+#light .project-decoration-2 {
+  background: radial-gradient(circle, var(--highlight-light) 0%, transparent 70%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .sub-title {
-    text-align: center;
-    margin-bottom: 20px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
   .work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
   }
-  
-  
-  .work {
-    position: relative;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 30px 0;
   }
-  
-  .work img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-   
+
+  .section-title {
+    font-size: 2rem;
   }
-  
-  .work:hover img {
-    transform: scale(1.1);
+
+  .work-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-  
-  .layer {
-    width: 110%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: -5%;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .work-image {
+    height: 220px;
+  }
+
+  .work-content {
+    padding: 20px;
+  }
+
+  .work-header {
     flex-direction: column;
-    padding: 0 ;
-    text-align: center;
-    transition: height 0.5s;
-    
+    gap: 10px;
   }
-  
-  .work:hover .layer {
-    height: 100%;
-    
-  }
-  
-  .layer h3 {
-    font-weight: 500;
-    margin-bottom: 10px;
-    font-size: 14px;
 
+  .work-date {
+    align-self: flex-start;
   }
-  
-  .layer p {
-    margin-bottom: 20px;
-    font-size: 14px;
+}
 
+@media (max-width: 576px) {
+  .projects-section {
+    padding: 20px 0;
   }
-  
-  .layer a {
-    margin-top: 16px;
-    color: #ff004f;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
+
+  .project-filters {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+    width: 100%;
   }
+
+  .filter-button {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .work-image {
+    height: 200px;
+  }
+}

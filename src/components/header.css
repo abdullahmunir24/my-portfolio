@@ -13,148 +13,335 @@ body {
 #header {
   width: 100%;
   height: 100vh;
-  background-image: url(../images/programmer.jpg);
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+/* Particle animation canvas */
+.particles-canvas {
+  display: none;
+}
+
+/* Semi-transparent overlay for contrast */
+#header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(18, 18, 18, 0.8) 0%, rgba(138, 43, 226, 0.4) 100%);
+  z-index: 1;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.header-background canvas {
+  position: fixed !important;
 }
 
 .container {
-  padding: 20px 10%;
-}
-
-
-
-nav ul li:first-child {
-  margin-left: 0;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
+  padding: 0 10%;
   position: relative;
-  cursor: pointer;
-}
-
-nav ul li a::after {
-  content: "";
-  width: 100%;
-  height: 3px;
-  background: #FFFF00;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: width 0.3s;
-  transform: scaleX(0);
-}
-
-nav ul li a:hover::after {
-  transform: scaleX(1);
-}
-
-
-.header-text {
-  margin-top: 20%;
-  font-size: 36px;
-}
-
-.header-text h1 {
-  font-size: 60px;
-  margin-top: 20px;
-  font-weight: 600;
-}
-
-.header-text h1 span {
-  color: #FFFF00;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 15px 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(8, 8, 8, 0.95);
+  backdrop-filter: blur(10px);
+  height: 60px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+#light nav {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #8a2be2, #00d9ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 nav ul {
   display: flex;
   align-items: center;
   list-style: none;
-  margin-top: -130px;
-  margin-right: -90px;
+  margin: 0;
 }
 
 nav ul li {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 
-.header-button {
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #8a2be2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #8a2be2;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Header content styling */
+.header-content {
+  min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: red;
-  background-color: white;
-  border: 0;
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.25rem;
-  font-size: 1.125rem;
+  padding: 0 10%;
+  position: relative;
+  z-index: 2;
+}
+
+.header-text {
+  max-width: 800px;
+  text-align: left;
+}
+
+.greeting {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.name {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, var(--accent-dark), var(--highlight-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards 0.2s;
+}
+
+.profession {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards 0.4s;
+}
+
+.highlight {
+  color: #8a2be2;
+}
+
+.typed-text {
+  color: #00d9ff;
+}
+
+/* Button styling */
+.header-buttons {
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+
+.modern-button {
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-btn {
+  background: linear-gradient(45deg, var(--accent-dark), var(--highlight-dark));
+  color: white;
+  border: none;
+}
+
+.contact-btn {
+  background: transparent;
+  border: 2px solid var(--accent-dark);
+  color: var(--text-dark);
+}
+
+.modern-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(138, 43, 226, 0.3);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1s;
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid var(--text-dark);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.wheel {
+  width: 4px;
+  height: 10px;
+  background-color: var(--text-dark);
+  border-radius: 2px;
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+.scroll-text {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+/* Mobile navigation */
+.navbar-toggler {
+  display: none;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
-  margin-left: -50px;
-  margin-top: -130px;
 }
 
-.header-button:hover {
-  background-color: yellow;
+.icon-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
 }
 
+.navbar-overlay {
+  display: none;
+}
 
-
-
+/* Make header responsive */
+@media (max-width: 990px) {
+  .name {
+    font-size: 3.5rem;
+  }
+  
+  .profession {
+    font-size: 1.8rem;
+  }
+}
 
 @media (max-width: 768px) {
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 20vh; 
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+  .container {
+    padding: 20px 5%;
   }
-
-  nav ul.open {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  nav ul li {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
+  
   .navbar-toggler {
     display: block;
-    cursor: pointer;
-    margin-left: auto;
-    width: 30px;
-    height: 30px;
+    z-index: 10;
   }
-
-  .icon-bar {
+  
+  nav.open .icon-bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  nav.open .icon-bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  nav.open .icon-bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background: rgba(18, 18, 18, 0.95);
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    z-index: 5;
+  }
+  
+  nav ul.open {
+    right: 0;
+  }
+  
+  nav ul li {
+    margin: 15px 0;
     width: 100%;
-    height: 3px;
-    background-color: #fff;
-    margin-bottom: 5px;
-    transition: transform 0.3s;
   }
-
-  nav.open .navbar-overlay {
+  
+  .navbar-overlay.open {
     display: block;
     position: fixed;
     top: 0;
@@ -162,27 +349,150 @@ nav ul li {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-
+    z-index: 4;
   }
-
-  .header-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+  .header-text {
     text-align: center;
-    color: red;
-    background-color: white;
-    border: 0;
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.25rem;
-    font-size: 1.125rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-left: 0;
-    margin-top: 10px;
   }
+  
+  .name {
+    font-size: 2.8rem;
+  }
+  
+  .profession {
+    font-size: 1.5rem;
+  }
+  
+  .header-buttons {
+    justify-content: center;
+  }
+  
+  .theme-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
 
-  .header-button:hover {
-    background-color: yellow;
+/* Light theme specific styles */
+#light .logo {
+  background: linear-gradient(45deg, #714381, #ff6b6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#light nav ul li a {
+  color: #121212;
+}
+
+#light nav ul li a::after {
+  background: #714381;
+}
+
+#light nav ul li a:hover {
+  color: #714381;
+}
+
+#light .name {
+  background: linear-gradient(to right, #714381, #ff6b6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#light .highlight {
+  color: #714381;
+}
+
+#light .typed-text {
+  color: #ff6b6b;
+}
+
+#light .mouse {
+  border-color: #121212;
+}
+
+#light .wheel {
+  background-color: #121212;
+}
+
+#light .scroll-text {
+  color: #121212;
+}
+
+#light .icon-bar {
+  background-color: #121212;
+}
+
+#light #header::after {
+  background: linear-gradient(135deg, rgba(245, 245, 247, 0.8) 0%, rgba(113, 67, 129, 0.4) 100%);
+}
+
+/* Switch styling from moon to toggle */
+.theme-switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch-container {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background: rgba(138, 43, 226, 0.2);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+
+#light .switch-container {
+  background: rgba(113, 67, 129, 0.2);
+}
+
+.switch-handle {
+  position: absolute;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(45deg, #8a2be2, #00d9ff);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#light .switch-handle {
+  left: calc(100% - 26px);
+  background: linear-gradient(45deg, #714381, #ff6b6b);
+}
+
+.switch-icon {
+  font-size: 12px;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

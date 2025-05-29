@@ -1,6 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
 import "./Footer.css";
+import { useInView } from "react-intersection-observer";
+import { Element } from "react-scroll";
 
 export default function Footer() {
   const form = useRef();
@@ -8,15 +10,26 @@ export default function Footer() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
+  const [submitting, setSubmitting] = useState(false);
+  
+  // Animation on scroll
+  const { ref: footerRef, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true
+  });
+  
+  // Current year for copyright
+  const currentYear = new Date().getFullYear();
+  
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setSubmitting(true);
+    
     const formData = new FormData(form.current);
     formData.append("user_name", fullName);
     formData.append("user_email", email);
     const templateParams = Object.fromEntries(formData);
-
+    
     emailjs
       .send(
         process.env.REACT_APP_SERVICE_ID,
@@ -30,134 +43,194 @@ export default function Footer() {
           setEmail("");
           setMessage("");
           setShowSuccessMessage(true);
-
+          setSubmitting(false);
+          
           setTimeout(() => {
             setShowSuccessMessage(false);
           }, 4000);
         } else {
           console.log("Error:", response.text);
+          setSubmitting(false);
         }
       })
       .catch((error) => {
         console.log("Error:", error);
+        setSubmitting(false);
       });
   };
-
+  
   return (
-    <div>
-      <section id="contact">
-        <div className="social">
-          <a
-            href="https://www.instagram.com/_abdullahmunir_/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://github.com/abdullahmunir24"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-github"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/abdullahmunir24/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-linkedin"></i>
-          </a>
+    <Element name="contact" className="footer-section">
+      <div className="footer-bg-gradient"></div>
+      
+      <div className="container footer-container" ref={footerRef}>
+        <div className="section-header animate-in">
+          <h2 className="section-title">
+            <span className="highlight-text">Let's</span> Connect
+          </h2>
+          <p className="section-subtitle">
+            Ready to collaborate on innovative projects? Reach out today!
+          </p>
         </div>
-        <div className="contact-box">
-          <div className="c-heading">
-            <h1>Get In Touch</h1>
-            <p>Call Or Email Me</p>
-          </div>
-          <div className="c-inputs">
-            <form ref={form} onSubmit={sendEmail}>
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                required
-              />
-              <input
-                type="email"
-                placeholder="example@gmail.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                name="email"
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="Write Message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-              />
-              <div className="contact-info">
-                <div>
-                  <i className="fas fa-phone"></i>
-                  <span className="phone-link">+1 236 457 3130</span>
+        
+        <div className="footer-content">
+          <div className="contact-info-container animate-in">
+            <div className="contact-info-card">
+              <div className="contact-info-header">
+                <div className="contact-info-icon">
+                  <i className="fas fa-map-marker-alt"></i>
                 </div>
-                <div>
-                  <i className="fas fa-envelope"></i>
-                  <a
-                    href="mailto:abdullahmunir2004@gmail.com"
-                    className="email-link"
-                  >
-                    abdullahmunir2004@gmail.com
-                  </a>
-                </div>
+                <h3>Location</h3>
               </div>
+              <p>Kelowna, British Columbia, Canada</p>
+            </div>
+            
+            <div className="contact-info-card">
+              <div className="contact-info-header">
+                <div className="contact-info-icon">
+                  <i className="fas fa-phone"></i>
+                </div>
+                <h3>Phone</h3>
+              </div>
+              <p className="phone-link">+1 236 457 3130</p>
+            </div>
+            
+            <div className="contact-info-card">
+              <div className="contact-info-header">
+                <div className="contact-info-icon">
+                  <i className="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+              </div>
+              <a href="mailto:abdullahmunir2004@gmail.com" className="email-link">
+                abdullahmunir2004@gmail.com
+              </a>
+            </div>
+            
+            <div className="social-links">
+              <a
+                href="https://www.instagram.com/_abdullahmunir_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="social-icon"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://github.com/abdullahmunir24"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="social-icon"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/abdullahmunir24/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="social-icon"
+              >
+                <i className="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div className="contact-form-container card animate-in">
+            <h3>Drop Me a Message</h3>
+            <form ref={form} onSubmit={sendEmail} className="contact-form">
+              <div className="form-group">
+                <label htmlFor="fullName">Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Your Name"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  required
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                />
+              </div>
+              
               {showSuccessMessage ? (
-                <div>
-                  <p className="success-message">
-                    Thank you for your submission!
-                  </p>
-                  <p className="success-message">
-                    A confirmation email has been sent to your email address.
-                  </p>
+                <div className="success-message">
+                  <div className="success-icon">
+                    <i className="fas fa-check-circle"></i>
+                  </div>
+                  <div className="success-text">
+                    <p>Message sent successfully!</p>
+                    <p>I'll get back to you soon.</p>
+                  </div>
                 </div>
               ) : (
-                <button type="submit" className="custom-button">
-                  Send Message
+                <button 
+                  type="submit" 
+                  className="modern-button submit-button"
+                  disabled={submitting}
+                >
+                  {submitting ? (
+                    <span>
+                      <i className="fas fa-spinner fa-spin"></i> Sending...
+                    </span>
+                  ) : (
+                    <span>
+                      <i className="fas fa-paper-plane"></i> Send Message
+                    </span>
+                  )}
                 </button>
               )}
             </form>
           </div>
         </div>
-        <div className="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164477.36692580467!2d-119.61958508788804!3d49.89957571728325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537d8cb6e3c730b3%3A0x4ef8e53ddab4c4f7!2sKelowna%2C%20BC!5e0!3m2!1sen!2sca!4v1699744931489!5m2!1sen!2sca"
-            width="600"
-            height="450"
-            style={{ border: "0" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </section>
-
-      <div className="new-content-container">
-        <p>&copy; 2023 Abdullah Munir</p>
-        <p>
-          Website hosted on{" "}
-          <a
-            href="https://www.netlify.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "white", textDecoration: "underline" }}
-          >
-            Netlify
-          </a>
-        </p>
       </div>
-    </div>
+      
+      <div className="footer-bottom">
+        <div className="container">
+          <p>&copy; {currentYear} Abdullah Munir. All rights reserved.</p>
+          <p>
+            Website hosted on{" "}
+            <a
+              href="https://www.netlify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Netlify
+            </a>
+          </p>
+        </div>
+      </div>
+      
+      {/* Decorative elements */}
+      <div className="footer-decoration-1"></div>
+      <div className="footer-decoration-2"></div>
+    </Element>
   );
 }
