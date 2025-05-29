@@ -1,0 +1,13 @@
+[build]
+  publish = "build"
+  command = "npm ci --legacy-peer-deps && npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "10.8.2"
+  CI = "false"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
