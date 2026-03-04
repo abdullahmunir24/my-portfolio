@@ -30,11 +30,11 @@ export default function Work() {
                   <h3>Software Engineering Intern</h3>
                   <span className="company-name">CGI</span>
                   <span className="experience-location">
-                    <i className="fas fa-map-marker-alt"></i> Toronto, Canada
+                    <i className="fas fa-map-marker-alt"></i> Toronto, ON
                   </span>
                 </div>
                 <div className="experience-duration">
-                  <span className="duration-badge">Jan 2025 – May 2025</span>
+                  <span className="duration-badge">Jan 2025 – Apr 2026</span>
                 </div>
               </div>
               
@@ -42,25 +42,82 @@ export default function Work() {
                 <ul className="experience-details">
                   <li>
                     <i className="fas fa-robot"></i>
-                    Developing a Generative AI tool, to automate UI development with Gemini RAG training, reducing iteration time from weeks to hours and increasing developer efficiency by 40%.
+                    Developed a Gemini-powered RAG system to automate Angular UI code generation for CGI's Design System, using semantic chunking and a weighted hybrid search combining FAISS and BM25 to reduce development cycles from weeks to hours.
                   </li>
                   <li>
                     <i className="fas fa-code"></i>
-                    Optimizing manual coding effort by 60% by developing a prompt engineering system with meta-prompts and GitHub Copilot integration to automate Angular component creation and code migrations.
+                    Developed AI migration agents to convert Java RMI and Swing UI into Angular and Spring Boot with DAO and MyBatis.
                   </li>
                   <li>
-                    <i className="fas fa-palette"></i>
-                    Proposed and implemented the adoption of Material 3 tokens in CGI's design system library used by external clients, enhancing UI consistency, accessibility, and boosting user engagement by 30%.
+                    <i className="fas fa-cloud"></i>
+                    Architected a migration pipeline on Google Cloud Run, utilizing GCS FUSE to mount data for zero-latency agent access.
+                  </li>
+                  <li>
+                    <i className="fas fa-shield-alt"></i>
+                    Secured migration infrastructure via Artifact Registry, automating CVE scanning to prevent false positives in agent images.
+                  </li>
+                  <li>
+                    <i className="fas fa-brain"></i>
+                    Deployed open-source LLMs on Vertex AI, saving $4,000 per month while enabling structured reasoning traces.
+                  </li>
+                  <li>
+                    <i className="fas fa-cogs"></i>
+                    Implemented key agents to automate PostgreSQL, Elasticsearch, and Grafana setups, reducing developer effort by 70%.
                   </li>
                 </ul>
                 
                 <div className="skills-used">
-                  <div className="skill-tag">Generative AI</div>
-                  <div className="skill-tag">Angular</div>
                   <div className="skill-tag">Gemini RAG</div>
-                  <div className="skill-tag">GitHub Copilot</div>
-                  <div className="skill-tag">Material 3</div>
-                  <div className="skill-tag">Prompt Engineering</div>
+                  <div className="skill-tag">Angular</div>
+                  <div className="skill-tag">Google Cloud Run</div>
+                  <div className="skill-tag">Vertex AI</div>
+                  <div className="skill-tag">FAISS / BM25</div>
+                  <div className="skill-tag">Spring Boot</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Honours Thesis at UBC */}
+            <div className={`experience-card ${inView ? 'animate-in' : ''}`} style={{ animationDelay: '0.15s' }}>
+              <div className="experience-header">
+                <div className="experience-company">
+                  <h3>Machine Learning Engineer</h3>
+                  <span className="company-name">University of British Columbia</span>
+                  <span className="experience-location">
+                    <i className="fas fa-map-marker-alt"></i> Kelowna, BC
+                  </span>
+                </div>
+                <div className="experience-duration">
+                  <span className="duration-badge">Sep 2025 – Apr 2026</span>
+                </div>
+              </div>
+              
+              <div className="experience-content">
+                <ul className="experience-details">
+                  <li>
+                    <i className="fas fa-network-wired"></i>
+                    Architected a text detection pipeline for Cree syllabics using PyTorch and CNN backbones with confidence scoring.
+                  </li>
+                  <li>
+                    <i className="fas fa-database"></i>
+                    Built a custom data generation pipeline converting raw image annotations into structured character and word-level CSVs.
+                  </li>
+                  <li>
+                    <i className="fas fa-chart-bar"></i>
+                    Designed custom evaluation metrics for a low-resource language, achieving high detection accuracy on a limited dataset.
+                  </li>
+                  <li>
+                    <i className="fas fa-layer-group"></i>
+                    Recreated a weakly supervised two-stage training process, to evaluate transferability for Cree syllabic detection.
+                  </li>
+                </ul>
+                
+                <div className="skills-used">
+                  <div className="skill-tag">PyTorch</div>
+                  <div className="skill-tag">CNN</div>
+                  <div className="skill-tag">Deep Learning</div>
+                  <div className="skill-tag">Python</div>
+                  <div className="skill-tag">Computer Vision</div>
                 </div>
               </div>
             </div>
@@ -76,7 +133,7 @@ export default function Work() {
                   </span>
                 </div>
                 <div className="experience-duration">
-                  <span className="duration-badge">Sep 2024 – Present</span>
+                  <span className="duration-badge">Sep 2024 – Dec 2024</span>
                 </div>
               </div>
               
@@ -102,37 +159,38 @@ export default function Work() {
               <div className="experience-header">
                 <div className="experience-company">
                   <h3>Software Developer</h3>
-                  <span className="company-name">University of British Columbia, Culture & Technology Department</span>
+                  <span className="company-name">University of British Columbia, Culture & Technology</span>
                   <span className="experience-location">
-                    <i className="fas fa-map-marker-alt"></i> Kelowna, Canada
+                    <i className="fas fa-map-marker-alt"></i> Kelowna, BC
                   </span>
                 </div>
                 <div className="experience-duration">
-                  <span className="duration-badge">May 2024 – Present</span>
+                  <span className="duration-badge">May 2024 – Apr 2026</span>
                 </div>
               </div>
               
               <div className="experience-content">
                 <ul className="experience-details">
                   <li>
-                    <i className="fas fa-code-branch"></i>
-                    Developing an educational 3D game in Unity for 24,000 students, by designing interactive terrain, User Interface elements, and implementing dynamic gameplay, including player movement, item interaction, level and scene management and quest completion.
+                    <i className="fas fa-gamepad"></i>
+                    Developed a scalable Unity-based 3D educational game for 24,000+ students using C#, Malbers AI, and modular systems.
+                  </li>
+                  <li>
+                    <i className="fas fa-eye"></i>
+                    Increased engagement by 30% through implementing the Observer Pattern to manage state change for time-based quests.
                   </li>
                   <li>
                     <i className="fas fa-puzzle-piece"></i>
-                    Created a Unity-based scene using scriptable objects to integrate post-level quizzes, to improve students learning outcomes by assessing students' understanding of indigenous land and sustainability and aligning the game with educational objectives.
-                  </li>
-                  <li>
-                    <i className="fas fa-gamepad"></i>
-                    Introduced time-based challenges and quests using C#, enhancing gameplay and increasing user interaction by collaborating with a research team and school management to integrate educational objectives into the game.
+                    Architected a ScriptableObject system to manage cross-scene state, aligning game-play with learning objectives.
                   </li>
                 </ul>
                 
                 <div className="skills-used">
                   <div className="skill-tag">Unity</div>
                   <div className="skill-tag">C#</div>
-                  <div className="skill-tag">3D Design</div>
-                  <div className="skill-tag">Game Development</div>
+                  <div className="skill-tag">Malbers AI</div>
+                  <div className="skill-tag">Observer Pattern</div>
+                  <div className="skill-tag">ScriptableObjects</div>
                 </div>
               </div>
             </div>
@@ -148,7 +206,7 @@ export default function Work() {
                   </span>
                 </div>
                 <div className="experience-duration">
-                  <span className="duration-badge">May 2024 – Present</span>
+                  <span className="duration-badge">May 2024 – Aug 2024</span>
                 </div>
               </div>
               

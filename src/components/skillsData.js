@@ -9,7 +9,6 @@ const skillsData = [
   },
   { id: 4, name: "TypeScript", image: require("../images/Typescript.png") },
   { id: 5, name: "C#", image: require("../images/C#.png") },
-  { id: 6, name: "C++", image: require("../images/C++.png") },
   {
     id: 7,
     name: "SQL",

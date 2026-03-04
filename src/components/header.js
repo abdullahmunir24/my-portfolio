@@ -88,9 +88,7 @@ export default function Header() {
     const options = {
       strings: [
         "Software Engineer",
-        "Web Developer",
-        "App Developer",
-        "Data Scientist",
+        "ML Engineer",
       ],
       typeSpeed: 70,
       backSpeed: 50,

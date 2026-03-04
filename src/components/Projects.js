@@ -22,10 +22,20 @@ export default function Projects() {
   // Project data with categories
   const projects = [
     {
+      id: 7,
+      title: "AllocAid (TA Allocation System)",
+      date: "May 2025 – August 2025",
+      description: "Developed a containerized Deno platform with Role-Based Access Control across 4+ user roles and 50+ CRUD endpoints. Designed a normalized SQL schema to support a custom scheduling algorithm, reducing manual coordination by 50%. Implemented CI/CD pipelines using GitHub Actions, resulting in a 30% reduction in deployment time.",
+      image: require("../images/app.jpg"),
+      link: "https://github.com/abdullahmunir24/AllocAid",
+      categories: ["web"],
+      technologies: ["TypeScript", "Deno", "Oak", "React", "SQL", "GitHub Actions"]
+    },
+    {
       id: 1,
-      title: "TSKFLO [GitHub]",
+      title: "TSKFLO",
       date: "Jan 2025 – Apr 2025",
-      description: "Architected a full-stack task management system that significantly increased team productivity by implementing real-time collaboration using React, Node.js, and JWT authentication. Developed a scalable role-based access control system that reduced unauthorized access attempts by 80% through implementing JWT authentication and layered architecture with React and Node.js.",
+      description: "Architected a full-stack task management system with 15+ CRUD endpoints secured using JWT-based role access control. Implemented real-time task updates and live messaging with Socket.IO, improving responsiveness and team productivity.",
       image: require("../images/TSKFLO.jpeg"),
       link: "https://github.com/abdullahmunir24/TSKFLO",
       categories: ["web"],

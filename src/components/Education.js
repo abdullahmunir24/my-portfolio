@@ -50,15 +50,7 @@ export default function Education() {
                     </li>
                     <li>
                       <i className="fas fa-star"></i>
-                      Received Dean's Honour List for the 2022-2023 Academic Year.
-                    </li>
-                    <li>
-                      <i className="fas fa-star"></i>
-                      Received Dean's Honour List for the 2023-2024 Academic Year.
-                    </li>
-                    <li>
-                      <i className="fas fa-star"></i>
-                      Received Dean's Honour List for the 2024-2025 Academic Year.
+                      Received Dean's Honour List for the 2022-2025 Academic Years.
                     </li>
                   </ul>
                 </div>

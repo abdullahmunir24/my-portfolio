@@ -132,13 +132,7 @@ export default function About() {
             <div className="about-description">
               <p>
                 As a computer science major at UBC, I have strong programming
-                skills in Java and Python, along with a keen interest in Machine
-                Learning, App and Web Development.
-              </p>
-              <p>
-                I am passionate about leveraging AI technologies to enhance the consumer experience.
-                Inspired by Generative AI, I am eager to apply my expertise in a
-                software engineering role.
+                skills in Java and Python, along with a strong interest in AI/ML, backend, and full-stack software development. 
               </p>
             </div>
             <div className="about-buttons">

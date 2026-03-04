@@ -127,7 +127,7 @@ export default function Footer() {
                 <i className="fab fa-github"></i>
               </a>
               <a
-                href="https://www.linkedin.com/in/abdullahmunir24/"
+                href="https://www.linkedin.com/in/abdullah-munir-b06a17250/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
