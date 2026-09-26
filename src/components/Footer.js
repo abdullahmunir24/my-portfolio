@@ -82,7 +82,7 @@ export default function Footer() {
                 </div>
                 <h3>Location</h3>
               </div>
-              <p>Kelowna, British Columbia, Canada</p>
+              <p>Toronto, Canada</p>
             </div>
             
             <div className="contact-info-card">
@@ -214,17 +214,6 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <p>&copy; {currentYear} Abdullah Munir. All rights reserved.</p>
-          <p>
-            Website hosted on{" "}
-            <a
-              href="https://www.netlify.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-link"
-            >
-              Netlify
-            </a>
-          </p>
         </div>
       </div>
       

@@ -26,31 +26,27 @@ export default function Education() {
             {/* UBC Education */}
             <div className="timeline animate-in" style={{ animationDelay: '0.2s' }}>
               <div className="timeline-icon">
-                <span className="year-tag">2022-2026</span>
+                <span className="year-tag">Sep 2022 – June 2026</span>
               </div>
               
               <div className="timeline-body">
                 <div className="timeline-header">
-                  <h3 className="timeline-title">The University of British Columbia</h3>
-                  <span className="timeline-degree">Bachelor of Science in Computer Science(Co-op)</span>
+                  <h3 className="timeline-title">University of British Columbia</h3>
+                  <span className="timeline-degree">BSc (Honours) in Computer Science (Co-op) - GPA: 4.20/4.33 (Dean's List)</span>
+                  <span className="timeline-location" style={{ fontSize: '0.9rem', color: '#8a2be2', display: 'block', marginTop: '4px' }}>
+                    <i className="fas fa-map-marker-alt"></i> Kelowna, Canada
+                  </span>
                 </div>
                 
                 <div className="timeline-content">
-      
-                  
                   <ul className="timeline-details">
                     <li>
                       <i className="fas fa-medal"></i>
-                      Recipient of UBC's International Major Entrance Scholarship (IMES), a prestigious 50% scholarship awarded to students based on exceptional academic and extracurricular achievements.
-                    </li>
-
-                    <li>
-                      <i className="fas fa-medal"></i>
-                      Recipient of the Faculty of Science International Student Award, a merit-based scholarship recognizing outstanding students in the Faculty of Science.
+                      Received UBC’s International Major Entrance Scholarship and Faculty of Science International Student Award
                     </li>
                     <li>
-                      <i className="fas fa-star"></i>
-                      Received Dean's Honour List for the 2022-2025 Academic Years.
+                      <i className="fas fa-book-reader"></i>
+                      <strong>Relevant Courses:</strong> Object-Oriented Programming, Data Structures & Algorithms, Data Analytics, Project Management, Machine Architecture, Artificial Intelligence, Software Engineering, Machine Learning, Parallel Programming (CUDA)
                     </li>
                   </ul>
                 </div>

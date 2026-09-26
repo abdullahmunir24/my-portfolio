@@ -455,3 +455,26 @@
     height: 200px;
   }
 }
+
+.project-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.project-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-color, #e0e0e0);
+}
+
+.project-bullets .bullet-icon {
+  color: #00d9ff;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}

@@ -35,53 +35,22 @@ const Skills = ({ skills }) => {
     { width: 1, itemsToShow: 1 }
   ];
   
-  const programmingLanguages = skills.filter((skill) =>
-    ["Python", "Java", "JavaScript", "TypeScript", "C#", "C++", "SQL"].includes(skill.name)
-  );
-  
-  const webAppDevelopment = skills.filter((skill) =>
-    [
-      "HTML",
-      "CSS",
-      "React.js",
-      "AngularJS",
-      "Node.js",
-      "React Native",
-      "MongoDB",
-      "Unity",
-    ].includes(skill.name)
-  );
-  
-  const mlTools = skills.filter((skill) =>
-    [
-      "TensorFlow",
-      "PyTorch",
-      "Keras",
-      "Pandas",
-      "NumPy",
-      "Seaborn",
-      "Matplotlib",
-      "GitHub",
-      "AWS (S3, EC2, Lambda)",
-      "Jupyter Notebook",
-      "Compute Canada",
-      "Tableau",
-    ].includes(skill.name)
-  );
-  
-  const certifications = skills.filter((skill) =>
-    ["MTA 98-381: Passed the exam with a score of 91/100"].includes(skill.name)
-  );
+  const programmingLanguages = skills.filter((skill) => skill.category === "Programming Languages");
+  const frameworksLibraries = skills.filter((skill) => skill.category === "Frameworks & Libraries");
+  const toolsTechnologies = skills.filter((skill) => skill.category === "Tools & Technologies");
+  const concepts = skills.filter((skill) => skill.category === "Concepts");
+  const certifications = skills.filter((skill) => skill.category === "Certifications");
 
   const skillCategories = [
     { title: "Programming Languages", skills: programmingLanguages },
-    { title: "Web/App Development", skills: webAppDevelopment },
-    { title: "ML/Tools", skills: mlTools }
-  ];
+    { title: "Frameworks & Libraries", skills: frameworksLibraries },
+    { title: "Tools & Technologies", skills: toolsTechnologies },
+    { title: "Concepts", skills: concepts }
+  ].filter(cat => cat.skills && cat.skills.length > 0);
   
   const renderSkillItem = (skill, index) => {
     const delayStyle = {
-      animationDelay: `${index * 0.1}s`
+      animationDelay: `${index * 0.08}s`
     };
     
     return (
@@ -91,7 +60,11 @@ const Skills = ({ skills }) => {
         style={delayStyle}
       >
         <div className="skill-icon-container">
-          <img src={skill.image} alt={skill.name} />
+          {skill.image ? (
+            <img src={skill.image} alt={skill.name} />
+          ) : (
+            <i className={skill.icon || "fas fa-code"} style={{ fontSize: "2.2rem", color: "#00d9ff" }}></i>
+          )}
         </div>
         <h3>{skill.name}</h3>
       </div>
@@ -137,11 +110,13 @@ const Skills = ({ skills }) => {
                   <div className="certification-grid">
                     {certifications.map((skill, index) => (
                       <div className={`skill-item-cert ${inView ? 'animate-in' : ''}`} key={skill.id}>
-                        <img
-                          src={skill.image}
-                          alt={skill.name}
-                          className="cert-image"
-                        />
+                        {skill.image && (
+                          <img
+                            src={skill.image}
+                            alt={skill.name}
+                            className="cert-image"
+                          />
+                        )}
                         <h3 className="cert-title">{skill.name}</h3>
                       </div>
                     ))}

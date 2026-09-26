@@ -25,21 +25,31 @@ export default function Projects() {
       id: 7,
       title: "AllocAid (TA Allocation System)",
       date: "May 2025 – August 2025",
-      description: "Developed a containerized Deno platform with Role-Based Access Control across 4+ user roles and 50+ CRUD endpoints. Designed a normalized SQL schema to support a custom scheduling algorithm, reducing manual coordination by 50%. Implemented CI/CD pipelines using GitHub Actions, resulting in a 30% reduction in deployment time.",
+      description: "Implemented JWT middleware across 100+ routes, enforcing role permissions and blocking cross-account profile edits. Built a Deno service running concurrent PostgreSQL checks for availability, schedules, and duplicate assignments. Containerized React, Deno, and PostgreSQL with Docker Compose and automated CI test coverage in GitHub Actions.",
+      bullets: [
+        "Implemented JWT middleware across 100+ routes, enforcing role permissions and blocking cross-account profile edits.",
+        "Built a Deno service running concurrent PostgreSQL checks for availability, schedules, and duplicate assignments.",
+        "Containerized React, Deno, and PostgreSQL with Docker Compose and automated CI test coverage in GitHub Actions."
+      ],
       image: require("../images/app.jpg"),
       link: "https://github.com/abdullahmunir24/AllocAid",
       categories: ["web"],
-      technologies: ["TypeScript", "Deno", "Oak", "React", "SQL", "GitHub Actions"]
+      technologies: ["React", "TypeScript", "Deno", "PostgreSQL", "Docker", "GitHub Actions"]
     },
     {
       id: 1,
-      title: "TSKFLO",
+      title: "TSKFLO (Task Management System)",
       date: "Jan 2025 – Apr 2025",
-      description: "Architected a full-stack task management system with 15+ CRUD endpoints secured using JWT-based role access control. Implemented real-time task updates and live messaging with Socket.IO, improving responsiveness and team productivity.",
+      description: "Used RTK Query cache updates to append Socket.IO messages to active conversations without reloading the page. Secured Socket.IO connections with JWT handshake middleware and organized live events into conversation rooms. Built MongoDB aggregation queries for task status, priority, and top-contributor metrics in admin dashboards.",
+      bullets: [
+        "Used RTK Query cache updates to append Socket.IO messages to active conversations without reloading the page.",
+        "Secured Socket.IO connections with JWT handshake middleware and organized live events into conversation rooms.",
+        "Built MongoDB aggregation queries for task status, priority, and top-contributor metrics in admin dashboards."
+      ],
       image: require("../images/TSKFLO.jpeg"),
       link: "https://github.com/abdullahmunir24/TSKFLO",
       categories: ["web"],
-      technologies: ["React", "Redux", "Node.js", "Socket.IO", "JWT", "Tailwind CSS"]
+      technologies: ["React", "Redux Toolkit", "Node.js", "MongoDB", "Socket.IO", "JWT"]
     },
     {
       id: 2,
@@ -142,7 +152,25 @@ export default function Projects() {
                   <h3>{project.title}</h3>
                   <span className="work-date">{project.date}</span>
                 </div>
-                <p className="work-description">{project.description}</p>
+                {project.bullets ? (
+                  <ul className="project-bullets">
+                    {project.bullets.map((bullet, bIdx) => (
+                      <li key={bIdx}>
+                        <i className="fas fa-check-circle bullet-icon"></i>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="work-description">{project.description}</p>
+                )}
+                {project.technologies && (
+                  <div className="skills-used" style={{ marginTop: '12px' }}>
+                    {project.technologies.map((tech, tIdx) => (
+                      <div className="skill-tag" key={tIdx}>{tech}</div>
+                    ))}
+                  </div>
+                )}
                 <a 
                   href={project.link} 
                   className="work-link"
